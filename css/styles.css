@@ -1,0 +1,30 @@
+.btn-primary {
+    --bs-btn-bg: #4a6bff;
+    --bs-btn-hover-bg: #3a56d4;
+    --bs-btn-active-bg: #2c44b0;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    position: relative;
+    z-index: 1;
+}
+
+.border-end-0 {
+    border-right-color: transparent !important;
+}
+
+.border-start-0 {
+    border-left-color: transparent !important;
+}
+
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+.carousel-item img {
+    object-fit: cover;
+    object-position: center;
+}
