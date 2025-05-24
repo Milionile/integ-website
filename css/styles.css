@@ -4,24 +4,35 @@
     --bs-btn-active-bg: #2c44b0;
 }
 
-.form-control:focus {
-    box-shadow: none;
-    position: relative;
-    z-index: 1;
+.filter-dark {
+    filter: brightness(0.5);
 }
 
-.border-end-0 {
-    border-right-color: transparent !important;
+/* ≥576px is Bootstrap small or "sm" */
+@media (min-width: 576px) {
+    .w-sm-75 {
+        width: 75% !important;
+    }
+    .w-sm-auto {
+        width: auto !important;
+    }
 }
 
-.border-start-0 {
-    border-left-color: transparent !important;
+@media (min-width: 768px) {
+    .text-md-inherit {
+        color: inherit !important;
+    }
 }
 
+/* ≥992px is Bootstrap large or "lg" */
 @media (min-width: 992px) {
     .dropdown:hover .dropdown-menu {
         display: block;
     }
+}
+
+#carousel {
+    height: 55vh;
 }
 
 .carousel-item img {

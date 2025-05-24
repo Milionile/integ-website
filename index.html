@@ -9,127 +9,141 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-white">
 	<!-- Navbar -->
-	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
-			<h2 class="navbar-brand m-auto ms-2">UEvents</h2>
-			
-			<!-- Search bar -->
-			<form class="d-flex flex-grow-1 justify-content-center justify-content-lg-end">
-				<div class="input-group w-75">
-					<input type="text" class="form-control border-end-0 rounded-end-0" placeholder="Search events...">
-					<input type="text" class="form-control border-start-0 rounded-start-0 d-none d-md-block" placeholder="Search location...">
-					<button type="submit" class="btn btn-primary">
-						<i class="fa-solid fa-search fa-fw"></i>
-					</button>
-				</div>
-			</form>
-
+	<nav class="navbar navbar-expand-lg sticky-top flex-column flex-sm-row align-items-center bg-light shadow-sm row-gap-2 px-3" data-bs-theme="light">
+		<div class="d-flex justify-content-between align-items-center w-100 w-sm-auto">
+			<a href="#" class="text-decoration-none">
+				<h2 class="navbar-brand m-0">UEvents</h2>
+			</a>
 			<!-- Navbar toggler for mobile view -->
+			<div class="d-block d-sm-none">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>	
+		</div>
+		
+		<!-- Search bar -->
+		<form class="d-flex flex-fill justify-content-sm-center justify-content-xl-end w-100 w-sm-auto">
+			<div class="input-group w-100 w-sm-75">
+				<input type="text" class="form-control border-end-0 rounded-end-0 shadow-none" placeholder="Search events...">
+				<input type="text" class="form-control d-none d-sm-block border-start-0 rounded-start-0 shadow-none" placeholder="Search location...">
+				<button type="submit" class="btn btn-primary">
+					<i class="fa-solid fa-search fa-fw"></i>
+				</button>
+			</div>
+		</form>
+
+		<!-- Navbar toggler for tablet view -->
+		<div class="d-none d-sm-block">
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			
-			<!-- Navbar links -->
-			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item dropdown me-3">
-						<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
-							Our Services<i class="fa-solid fa-caret-down fa-fw"></i>
-						</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Browse Events</a></li>
-							<li><a class="dropdown-item" href="#">Create Events</a></li>
-						</ul>
-					</li>
+		</div>
 
-					<li class="nav-item dropdown me-3">
-						<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
-							Tickets<i class="fa-solid fa-caret-down fa-fw"></i>
-						</a>
-						<ul class="dropdown-menu">
-							<li> <a class="dropdown-item" href="#">Purchase Tickets</a></li>
-							<li> <a class="dropdown-item" href="#">My Tickets</a></li>
-						</ul>
-					</li>
-					
-					<li class="nav-item dropdown me-3">
-						<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
-							Help Center<i class="fa-solid fa-caret-down fa-fw"></i>
-						</a>
-						<ul class="dropdown-menu">
-							<li> <a class="dropdown-item" href="#">FAQs</a></li>
-							<li> <a class="dropdown-item" href="#">Contact Event Organizers</a></li>
-						</ul>
-					</li>
-					
-					<li class="nav-item dropdown me-3">
-						<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
-							About Us<i class="fa-solid fa-caret-down fa-fw"></i>
-						</a>
-						<ul class="dropdown-menu">
-							<li> <a class="dropdown-item" href="#">Who We Are</a></li>
-							<li> <a class="dropdown-item" href="#">Contact Us</a></li>
-							<li> <a class="dropdown-item" href="#">Privacy and Terms</a></li>
-						</ul>
-					</li>
-					
-					<li class="nav-item dropdown position-relative">
-						<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
-							My Account<i class="fa-solid fa-caret-down fa-fw"></i>
-						</a>
-						<ul class="dropdown-menu" style="right: 0; left: auto;">
-							<li> <a class="dropdown-item" href="#">Sign Up</a></li>
-							<li> <a class="dropdown-item" href="#">Login</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse align-self-start justify-content-sm-end" id="navbarNav">
+			<ul class="navbar-nav column-gap-1 ms-3">
+				<li class="nav-item dropdown">
+					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+						Our Services <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Browse Events</a></li>
+						<li><a class="dropdown-item" href="#">Create Events</a></li>
+					</ul>
+				</li>
+
+				<li class="nav-item dropdown">
+					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+						Tickets <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li> <a class="dropdown-item" href="#">Purchase Tickets</a></li>
+						<li> <a class="dropdown-item" href="#">My Tickets</a></li>
+					</ul>
+				</li>
+				
+				<li class="nav-item dropdown">
+					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+						Help Center <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li> <a class="dropdown-item" href="#">FAQs</a></li>
+						<li> <a class="dropdown-item" href="#">Contact Event Organizers</a></li>
+					</ul>
+				</li>
+				
+				<li class="nav-item dropdown">
+					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+						About Us <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li> <a class="dropdown-item" href="#">Who We Are</a></li>
+						<li> <a class="dropdown-item" href="#">Contact Us</a></li>
+						<li> <a class="dropdown-item" href="#">Privacy and Terms</a></li>
+					</ul>
+				</li>
+				
+				<li class="nav-item dropdown position-relative">
+					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+						My Account <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
+					</a>
+					<ul class="dropdown-menu" style="right: 0; left: auto;">
+						<li> <a class="dropdown-item" href="#">Sign Up</a></li>
+						<li> <a class="dropdown-item" href="#">Login</a></li>
+					</ul>
+				</li>
+			</ul>
 		</div>
 	</nav>
-	
-	<!-- Hero -->
-	<section class="hero-section text-center my-5">
-		<div class="container">
-			<h1 class="display-3 fw-bold">Welcome to UEvents</h1>
-			<p class="lead text-muted">Your one-stop solution for all event needs.<br>Explore, create, and manage events with ease.</p>
-			
-			<!-- Carousel -->
-			<div id="eventsCarousel" class="carousel slide mx-auto my-4" data-bs-ride="carousel" style="width: 1000px; height: 370px;">
-				<div class="carousel-inner h-100">
-					<div class="carousel-item active h-100">
-						<img src="images/eras-tour.jpg" class="d-block w-100 h-100" alt="Taylor Swift's Eras Tour">
-					</div>
-					<div class="carousel-item h-100">
-						<img src="images/hibana-tour.png" class="d-block w-100 h-100" alt="Ado's Hibana Tour">
-					</div>
-					<div class="carousel-item h-100">
-						<img src="images/food-expo.avif" class="d-block w-100 h-100" alt="17th Philippine Food Expo">
-					</div>
-				</div>
 
-				<!-- Carousel controls -->
-				<button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel" data-bs-slide="next">
-					<span class="carousel-control-next-icon"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
+	<!-- Hero -->
+	<section class="position-relative text-center py-5 px-2">
+		<!-- Background carousel for small screens -->
+		<div class="position-absolute top-0 start-0 z-n1 w-100 h-100 d-block d-md-none carousel slide filter-dark" data-bs-ride="carousel" data-bs-interval="3000">
+			<div class="carousel-inner h-100">
+				<div class="carousel-item h-100 active">
+					<img src="images\eras-tour.jpg" class="d-block w-100 h-100" alt="Eras Tour Event">
+				</div>
+				<div class="carousel-item h-100">
+					<img src="images\food-expo.png" class="d-block w-100 h-100" alt="Food Expo Event">
+				</div>
+				<div class="carousel-item h-100">
+					<img src="images\hibana-tour.png" class="d-block w-100 h-100" alt="Hibana Tour Event">
+				</div>
+			</div>
+		</div>
+
+		<h1 class="display-3 fw-bold text-white text-md-inherit">Welcome to UEvents</h1>
+		<p class="lead mx-2 text-white text-md-inherit">Your one-stop solution for all event needs.<br>Explore, create, and manage events with ease.</p>
+
+		<!-- Normal carousel for medium screens -->
+		<div id="carousel" class="position-relative w-75 mx-auto my-4 d-none d-md-block carousel slide border border-light-subtle shadow shadow-sm" data-bs-ride="carousel">
+			<div class="carousel-inner h-100">
+				<div class="carousel-item h-100 active">
+					<img src="images\eras-tour.jpg" class="d-block w-100 h-100" alt="Eras Tour Event">
+				</div>
+				<div class="carousel-item h-100">
+					<img src="images\food-expo.png" class="d-block w-100 h-100" alt="Food Expo Event">
+				</div>
+				<div class="carousel-item h-100">
+					<img src="images\hibana-tour.png" class="d-block w-100 h-100" alt="Hibana Tour Event">
+				</div>
 			</div>
 			
-			<!-- CTA -->
-			<a href="#" class="btn btn-primary btn-lg">Get Started</a>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
 		</div>
-	</section>
-
-	<!-- Categories -->
-	<section>
-		<div class="row">
-			
-		</div>
+		
+		<a href="#" class="btn btn-primary btn-lg">Get Started</a>
 	</section>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
