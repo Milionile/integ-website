@@ -39,3 +39,16 @@
     object-fit: cover;
     object-position: center;
 }
+
+#categories-links a img {
+    width: 10vw;
+    min-width: 50px;
+    max-width: 10vh;
+}
+
+.events-cards div.col div.card {
+    transition: transform 0.2s;
+}
+.events-cards div.col div.card:hover {
+    transform: scale(1.05);
+}
