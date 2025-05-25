@@ -27,9 +27,9 @@
 		<!-- Search bar -->
 		<form class="d-flex w-100 w-sm-auto flex-fill justify-content-sm-center justify-content-xl-end">
 			<div class="input-group w-100 w-sm-75">
-				<input type="text" class="form-control border-end-0 rounded-end-0 shadow-none" placeholder="Search events...">
+				<input type="text" class="form-control border-end-0 rounded-start-3 rounded-end-0 shadow-none" placeholder="Search events...">
 				<input type="text" class="form-control d-none d-sm-block border-start-0 rounded-start-0 shadow-none" placeholder="Search location...">
-				<button type="submit" class="btn btn-primary">
+				<button type="submit" class="btn btn-primary rounded-end-3">
 					<i class="fa-solid fa-search fa-fw"></i>
 				</button>
 			</div>
@@ -49,7 +49,7 @@
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						Our Services <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
-					<ul class="dropdown-menu">
+					<ul class="dropdown-menu shadow-sm">
 						<li><a class="dropdown-item" href="#">Browse Events</a></li>
 						<li><a class="dropdown-item" href="#">Create Events</a></li>
 					</ul>
@@ -59,7 +59,7 @@
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						Tickets <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
-					<ul class="dropdown-menu">
+					<ul class="dropdown-menu shadow-sm">
 						<li> <a class="dropdown-item" href="#">Purchase Tickets</a></li>
 						<li> <a class="dropdown-item" href="#">My Tickets</a></li>
 					</ul>
@@ -69,7 +69,7 @@
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						Help Center <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
-					<ul class="dropdown-menu">
+					<ul class="dropdown-menu shadow-sm">
 						<li> <a class="dropdown-item" href="#">FAQs</a></li>
 						<li> <a class="dropdown-item" href="#">Contact Event Organizers</a></li>
 					</ul>
@@ -79,7 +79,7 @@
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						About Us <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
-					<ul class="dropdown-menu">
+					<ul class="dropdown-menu shadow-sm">
 						<li> <a class="dropdown-item" href="#">Who We Are</a></li>
 						<li> <a class="dropdown-item" href="#">Contact Us</a></li>
 						<li> <a class="dropdown-item" href="#">Privacy and Terms</a></li>
@@ -90,7 +90,7 @@
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						My Account <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
-					<ul class="dropdown-menu" style="right: 0; left: auto;">
+					<ul class="dropdown-menu shadow-sm" style="right: 0; left: auto;">
 						<li> <a class="dropdown-item" href="#">Sign Up</a></li>
 						<li> <a class="dropdown-item" href="#">Login</a></li>
 					</ul>
@@ -100,36 +100,36 @@
 	</nav>
 	
 	<!-- Hero -->
-	<section class="position-relative text-center px-2 py-5 mb-2">
+	<section id="hero" class="position-relative text-center px-2 py-5 mb-3">
 		<!-- Background carousel for small screens -->
 		<div class="position-absolute top-0 start-0 w-100 h-100 z-n1 d-block d-md-none carousel slide filter-dark" data-bs-ride="carousel" data-bs-interval="3000">
 			<div class="carousel-inner h-100">
 				<div class="carousel-item h-100 active">
-					<img src="images\eras-tour.jpg" class="d-block w-100 h-100" alt="Eras Tour Event">
+					<img src="images/carousel/eras-tour.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Taylor Swift performing on stage during the Eras Tour">
 				</div>
 				<div class="carousel-item h-100">
-					<img src="images\food-expo.png" class="d-block w-100 h-100" alt="Food Expo Event">
+					<img src="images/carousel/food-expo.png" class="d-block w-100 h-100 object-fit-cover" alt="Food festival setting with various culinary displays">
 				</div>
 				<div class="carousel-item h-100">
-					<img src="images\hibana-tour.png" class="d-block w-100 h-100" alt="Hibana Tour Event">
+					<img src="images/carousel/hibana-tour.png" class="d-block w-100 h-100 object-fit-cover" alt="ADO performing with vibrant visual effects">
 				</div>
 			</div>
 		</div>
 		
-		<h1 class="display-3 fw-bold text-white text-md-inherit">Welcome to UEvents</h1>
-		<p class="lead mx-2 text-white text-md-inherit">Your one-stop solution for all event needs.<br>Explore, create, and manage events with ease.</p>
+		<h1 class="display-3 fw-bold text-white text-md-reset">Welcome to UEvents</h1>
+		<p class="lead mx-2 text-white text-md-reset">Your one-stop solution for all event needs.<br>Explore, create, and manage events with ease.</p>
 
 		<!-- Normal carousel for medium screens -->
 		<div id="carousel" class="position-relative w-75 mx-auto my-4 d-none d-md-block carousel slide border border-light-subtle shadow shadow-sm" data-bs-ride="carousel">
 			<div class="carousel-inner h-100">
 				<div class="carousel-item h-100 active">
-					<img src="images\eras-tour.jpg" class="d-block w-100 h-100" alt="Eras Tour Event">
+					<img src="images/carousel/hibana-tour.png" class="d-block w-100 h-100 object-fit-cover" alt="ADO performing with vibrant visual effects">
 				</div>
 				<div class="carousel-item h-100">
-					<img src="images\food-expo.png" class="d-block w-100 h-100" alt="Food Expo Event">
+					<img src="images/carousel/eras-tour.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Taylor Swift performing on stage during the Eras Tour">
 				</div>
 				<div class="carousel-item h-100">
-					<img src="images\hibana-tour.png" class="d-block w-100 h-100" alt="Hibana Tour Event">
+					<img src="images/carousel/food-expo.png" class="d-block w-100 h-100 object-fit-cover" alt="Food festival setting with various culinary displays">
 				</div>
 			</div>
 			
@@ -148,146 +148,390 @@
 
 	<!-- Categories -->
 	<section class="text-center mb-5">
-		<h2 class="fw-bold mb-4">Categories</h2>
-		<div id="categories-links" class="row w-75 mx-auto flex-nowrap overflow-x-scroll column-gap-2">
+		<h2 class="mb-2">Categories</h2>
+		<div id="categories-links" class="row w-75 mx-auto flex-nowrap overflow-x-auto column-gap-2">
 			<!-- Music, Nightlife, Performing & Visual Arts, Holidays, Dating, Hobbies, Business, Food & Drink-->
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-around">
-				<img src="icons/music.svg" alt="Music Icon" class="m-auto">
+			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+				<img src="icons/music.svg" alt="Music category icon showing musical notes" class="mx-auto">
 				<span class="mt-2">Music</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-around">
-				<img src="icons/night-life.svg" alt="Music Icon" class="m-auto">
+			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+				<img src="icons/night-life.svg" alt="Nightlife category icon showing city at night" class="mx-auto">
 				<span class="mt-2">Nightlife</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-around">
-				<img src="icons/performing-arts.svg" alt="Music Icon" class="m-auto">
+			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+				<img src="icons/performing-arts.svg" alt="Performing arts category icon showing theater masks" class="mx-auto">
 				<span class="mt-2">Performances</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-evenly">
-				<img src="icons/holiday.svg" alt="Music Icon" class="m-auto">
+			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+				<img src="icons/holiday.svg" alt="Holiday category icon showing celebration decorations" class="mx-auto">
 				<span class="mt-2">Holidays</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-around">
-				<img src="icons/dating.svg" alt="Music Icon" class="m-auto">
+			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+				<img src="icons/dating.svg" alt="Dating category icon showing heart symbol" class="mx-auto">
 				<span class="mt-2">Dating</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-around">
-				<img src="icons/hobbies.svg" alt="Music Icon" class="m-auto">
+			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+				<img src="icons/hobbies.svg" alt="Hobbies category icon showing craft supplies" class="mx-auto">
 				<span class="mt-2">Hobbies</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-around">
-				<img src="icons/business.svg" alt="Music Icon" class="m-auto">
+			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+				<img src="icons/business.svg" alt="Business category icon showing briefcase" class="mx-auto">
 				<span class="mt-2">Business</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-around">
-				<img src="icons/food.svg" alt="Music Icon" class="m-auto">
+			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+				<img src="icons/food.svg" alt="Food and drink category icon showing utensils and glass" class="mx-auto">
 				<span class="mt-2">Food & Drink</span>
 			</a>
 		</div>
 	</section>
 
 	<!-- Featured events -->
-	<section class="mb-5">
-		<h2 class="text-center fw-bold mb-4">Featured Events</h2>
-		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-4 mx-3 justify-content-center events-cards">
-			<div class="col">
-				<div class="card h-100">
-					<img class="card-img-top">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title text-center">Global Festival 2025</h5>
-						<p class="card-text">
-							Join the biggest cultural celebration in the heart of the city.
-						</p>
-						<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+	<section>
+		<!-- Featured events -->
+		<section class="mb-5">
+			<h2 class="text-center mb-4">Featured Events</h2>
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-4 mx-3 justify-content-center">
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\global_festival_2025.png" alt="Colorful promotional banner for Global Festival 2025">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">Global Festival 2025</h5>
+							<p class="card-text text-truncate-3">
+								Join the biggest cultural celebration in the heart of the city.
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> ₱500.00</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> WorldFest Org
+							</li>
+						</ul>
 					</div>
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item">Price: PHP 500</li>
-						<li class="list-group-item">Organizer: WorldFest Org</li>
-					</ul>
+				</div>
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\defender_octa.avif" alt="Land Rover Defender Octa vehicle on display">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">Defender Octa Launch</h5>
+							<p class="card-text text-truncate-3">
+								Get ready to witness the epic launch of our newest product, Defender Octa - an event full of excitement and innovation!
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> Free!</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> Land Rover
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\traders_fair.avif" alt="Trading and financial education conference setup">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">Traders Fair 2025 - (Financial Education Event)</h5>
+							<p class="card-text text-truncate-3">
+								Stocks, Forex, Futures, Cryptocurrency and Options, Investing and Brokers - all in one trading educational event!
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> Free!</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> FINEXPO - Traders Fair & Traders Awards
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\movie_cause.avif" alt="Theater screening event for charity fundraising">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">Life Fairview Terraces Fund Raising</h5>
+							<p class="card-text text-truncate-3">
+								Brace yourselves for we are about to embark on a BIGGER SCREEN for a BIGGER PURPOSE!
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> ₱950.00</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> Life An Every Nation Church
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="col">
-				<div class="card h-100">
-					<img class="card-img-top">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title text-center">Startup Summit</h5>
-						<p class="card-text">
-							Where innovation meets opportunity. Meet top tech founders.
-						</p>
-						<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+		</section>
+
+		<!-- Music events -->
+		<section class="mb-5">
+			<h2 class="text-center mb-4">Music Events</h2>
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-4 mx-3 justify-content-center">
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\ubermensch.jpg" alt="G-DRAGON in dramatic pose during Übermensch Tour">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">G-DRAGON: Übermensch Tour</h5>
+							<p class="card-text text-truncate-3">
+								K-pop icon G-DRAGON performs his long-awaited solo show with powerful visuals and stagecraft.
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> ₱8,500.00</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> Wilbros Live
+							</li>
+						</ul>
 					</div>
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item">Price: PHP 1,200</li>
-						<li class="list-group-item">Organizer: InnovateNow PH</li>
-					</ul>
+				</div>
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\boyz_ii_men2.jpg" alt="Boyz II Men performing on stage in Manila">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">Boyz II Men: Live in Manila</h5>
+							<p class="card-text text-truncate-3">
+								The iconic R&B group serenades fans with timeless hits and smooth harmonies.
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> ₱1,200.00</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> Wilbros Live
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\snarky_puppy2.jpg" alt="Snarky Puppy band performing live on stage">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">Snarky Puppy: We Like It Here Tour</h5>
+							<p class="card-text text-truncate-3">
+								A celebration of their jazz-fusion masterpiece with a live set full of groove and musicianship.
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> ₱4,910.00</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> Karpos Multimedia
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\hibana.jpg" alt="ADO in concert with spectacular lighting effects">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">ADO World Tour: Manila Stop</h5>
+							<p class="card-text text-truncate-3">
+								The mysterious J-pop artist known for anime soundtracks brings an immersive visual-musical experience.
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> ₱3,200.00</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> Ovation Productions
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="col">
-				<div class="card h-100">
-					<img class="card-img-top">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title text-center">Art in Motion</h5>
-						<p class="card-text">
-							An immersive experience with live artists, music, and visuals.
-						</p>
-						<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+		</section>
+
+		<!-- Musicals & Theater -->
+		<section class="mb-5">
+			<h2 class="text-center mb-4">Musicals & Theater</h2>
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-4 mx-3 justify-content-center">
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\evan_hansen.webp" alt="Dear Evan Hansen musical promotional poster">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">Dear Evan Hansen</h5>
+							<p class="card-text text-truncate-3">
+								A heartwarming story of love, loss, and redemption.
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> ₱1,200.00</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> GMG Productions
+							</li>
+						</ul>
 					</div>
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item">Price: PHP 350</li>
-						<li class="list-group-item">Organizer: LocalCanvas</li>
-					</ul>
+				</div>
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\hamilton.webp" alt="Hamilton musical Manila production poster">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">Hamilton: Manila Premiere</h5>
+							<p class="card-text text-truncate-3">
+								in-Manuel Miranda’s revolutionary musical debuts in Manila, blending hip-hop, jazz, and history in a genre-defining theatrical experience.
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> ₱4,200.00</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> GMG Productions
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\delia_d.jpg" alt="Promotional image for Delia D. musical production">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">Delia D.</h5>
+							<p class="card-text text-truncate-3">
+								An original Filipino musical spotlighting queer stories, set to the music of Jonathan Manalo. Bold, powerful, and proudly local.
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> ₱2,500.00</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> TicketWorld PH
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\one_more_chance.webp" alt="One More Chance musical adaptation poster featuring Ben&Ben">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">One More Chance, The Musical</h5>
+							<p class="card-text text-truncate-3">
+								A stage adaptation of the hit film, featuring the music of Ben&Ben in a heartfelt romantic journey.
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> ₱1,200.00</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> Philippine Educational Theater Association (PETA)
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="col">
-				<div class="card h-100">
-					<img class="card-img-top">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title text-center">Midnight Rooftop Bash</h5>
-						<p class="card-text">
-							Dress up. Show up. Dance under the stars.
-						</p>
-						<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+		</section>
+
+		<!-- Gaming -->
+		<section class="mb-5">
+			<h2 class="text-center mb-4">Gaming</h2>
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-4 mx-3 justify-content-center">
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\valorant_masters_toronto.avif" alt="Valorant esports tournament stage in Toronto">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">Valorant Champions Tour: Masters Toronto</h5>
+							<p class="card-text text-truncate-3">
+								Top Valorant teams clash in Toronto for a chance to advance to Champions 2025 in Paris.
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> Free!</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> Riot Games
+							</li>
+						</ul>
 					</div>
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item">Price: PHP 800</li>
-						<li class="list-group-item">Organizer: Moonlight Events</li>
-					</ul>
+				</div>
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\global_gaming_expo.jpg" alt="Global Gaming Expo convention floor">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">Global Gaming Expo (G2E) 2025</h5>
+							<p class="card-text text-truncate-3">
+								The premier event for the global gaming industry, showcasing the latest innovations and trends shaping the future of gaming.
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> ₱1,500.00</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> Global Gaming Expo
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\gamescom.webp" alt="Gamescom 2025 gaming convention entrance">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">Gamescom 2025
+							</h5>
+							<p class="card-text text-truncate-3">
+								The world's largest gaming event where developers showcase upcoming titles and gaming technology innovations.
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> ₱1,200.00</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> Koelnmesse
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card event-card h-100">
+						<img class="card-img-top object-fit-cover" src="images\summer_game_fest.webp" alt="Summer Game Fest main stage presentation">
+						<div class="card-body d-flex flex-column mh-50">
+							<h5 class="card-title text-center">Summer Game Fest 2025</h5>
+							<p class="card-text text-truncate-3">
+								A global event celebrating the latest in gaming with world premieres, live performances, and exclusive content.
+							</p>
+							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><strong>Price:</strong> Free!</li>
+							<li class="list-group-item text-truncate-3">
+								<strong>Organizer:</strong> Summer Game Fest
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="col">
-				<div class="card h-100">
-					<img class="card-img-top">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title text-center">Design Expo 2025</h5>
-						<p class="card-text">
-							Showcasing the future of architecture and innovation.
-						</p>
-						<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-					</div>
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item">Price: FREE</li>
-						<li class="list-group-item">Organizer: ArchiNext</li>
-					</ul>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card h-100">
-					<img class="card-img-top">
-					<div class="card-body d-flex flex-column">
-						<h5 class="card-title text-center">Tech Future Talk</h5>
-						<p class="card-text">
-							Explore AI, Robotics, and the future of work.
-						</p>
-						<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-					</div>
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item">Price: PHP 950</li>
-						<li class="list-group-item">Organizer: FutureLab</li>
-					</ul>
+		</section>
+	</section>
+	
+	<!-- Stay updated -->
+	<div class="text-center mx-3 mb-5">
+		<h3>Stay Updated</h3>
+		<p>Subscribe to get the latest event news and offers.</p>
+		
+		<div class="row justify-content-center">
+			<div class="col-9 col-sm-6 col-md-5">
+				<div class="input-group">
+					<input type="email" class="form-control" placeholder="Enter your email">
+					<button type="submit" class="btn btn-primary">
+						Subscribe
+					</button>
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+
+	<!-- Footer -->
+	<footer class="bg-dark text-white text-center py-4">
+		<p class="mb-1">© 2025 UEvents. All rights reserved.</p>
+		<ul class="list-inline mb-0">
+			<li class="list-inline-item"><a href="#" class="text-decoration-none">Privacy & Terms</a></li>
+			<li class="list-inline-item"><a href="#" class="text-decoration-none">Contact</a></li>
+			<li class="list-inline-item"><a href="#" class="text-decoration-none">FAQs</a></li>
+		</ul>
+	</footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>

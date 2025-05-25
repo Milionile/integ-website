@@ -1,43 +1,54 @@
 .btn-primary {
-    --bs-btn-bg: #4a6bff;
-    --bs-btn-hover-bg: #3a56d4;
-    --bs-btn-active-bg: #2c44b0;
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: #c31835;
+    --bs-btn-border-color: #c31835;
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: #9f1329;
+    --bs-btn-hover-border-color: #9f1329;
+    --bs-btn-focus-shadow-rgb: 195, 24, 53;
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: #7c0f20;
+    --bs-btn-active-border-color: #7c0f20;
+}
+
+button, a {
+    transition: background-color 0.2s, color 0.2s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    --bs-heading-color: #c31835;
+}
+
+.navbar-brand {
+    --bs-navbar-brand-color: #c31835;
 }
 
 .filter-dark {
-    filter: brightness(0.5);
+    filter: brightness(0.4);
 }
 
 /* ≥576px is Bootstrap small or "sm" */
 @media (min-width: 576px) {
-    .w-sm-75 {
-        width: 75% !important;
-    }
-    .w-sm-auto {
-        width: auto !important;
-    }
+    .w-sm-75 { width: 75% !important; }
+    .w-sm-auto { width: auto !important; }
 }
 
+/* ≥768px is Bootstrap medium or "md" */
 @media (min-width: 768px) {
-    .text-md-inherit {
-        color: inherit !important;
+    .text-md-reset { color: inherit !important; }
+
+    #hero {
+        h1, h2, h3, h4, h5, h6 { color: #c31835 !important; }
     }
 }
 
 /* ≥992px is Bootstrap large or "lg" */
 @media (min-width: 992px) {
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
+    .dropdown:hover .dropdown-menu { display: block; }
 }
 
 #carousel {
     height: 55vh;
-}
-
-.carousel-item img {
-    object-fit: cover;
-    object-position: center;
 }
 
 #categories-links a img {
@@ -46,9 +57,24 @@
     max-width: 10vh;
 }
 
-.events-cards div.col div.card {
-    transition: transform 0.2s;
+.event-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    .card-img-top {
+        height: 50vw;
+        
+        @media (min-width: 768px) { height: 30vw; }
+        @media (min-width: 992px) { height: 15vw; }
+    }
 }
-.events-cards div.col div.card:hover {
-    transform: scale(1.05);
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-truncate-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
