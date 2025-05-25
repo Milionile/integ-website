@@ -19,8 +19,20 @@ h1, h2, h3, h4, h5, h6 {
     --bs-heading-color: #c31835;
 }
 
-.navbar-brand {
-    --bs-navbar-brand-color: #c31835;
+.navbar {
+    .navbar-brand {
+        --bs-navbar-brand-color: #c31835;
+        --bs-navbar-brand-hover-color: #9f1329;
+    }
+    .nav-item {
+        --bs-nav-link-hover-color: #c31835;
+        --bs-nav-link-active-color: #9f1329;
+    }
+    .dropdown-item {
+        --bs-dropdown-link-hover-color: #c31835;
+        --bs-dropdown-link-active-color: #9f1329;
+    }
+    
 }
 
 .filter-dark {
