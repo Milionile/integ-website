@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     .dropdown-item {
         --bs-dropdown-link-hover-color: #c31835;
         --bs-dropdown-link-active-color: #9f1329;
+        --bs-dropdown-link-active-bg: #f8d7da;
     }
 }
 

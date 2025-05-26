@@ -19,7 +19,7 @@ function updateDropdownContent(templatePath, errorMessage) {
 
 document.getElementById('loginForm').addEventListener('submit', function (e) {
     e.preventDefault();
-    updateDropdownContent('/templates/login/logged_in_dropdown.html', 'Failed to log in')
+    updateDropdownContent('templates/login/logged_in_dropdown.html', 'Failed to log in')
         .then(() => {
             const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
             loginModal.hide();
@@ -29,6 +29,6 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 document.addEventListener('click', function(e) {
     if (e.target.matches('#accountDropdown .dropdown-item[href="#logout"]')) {
         e.preventDefault();
-        updateDropdownContent('/templates/login/logged_out_dropdown.html', 'Failed to log out');
+        updateDropdownContent('templates/login/logged_out_dropdown.html', 'Failed to log out');
     }
 });
