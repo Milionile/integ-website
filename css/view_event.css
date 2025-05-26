@@ -1,0 +1,12 @@
+#ticket-quantity {
+    width: fit-content;
+
+    input {
+        width: 3rem;
+        text-align: center;
+    }
+}
+
+.card.sticky-top {
+    top: 4.8rem; /* Adjust the value as needed for the desired margin */
+}

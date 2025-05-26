@@ -8,10 +8,11 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
 </head>
-<body class="bg-white">
+<body class="bg-light min-vh-100 d-flex flex-column">
 	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg flex-column flex-sm-row sticky-top bg-light align-items-center row-gap-2 px-3 shadow-sm" data-bs-theme="light">
+	<nav class="navbar navbar-expand-lg flex-column flex-sm-row sticky-top bg-white align-items-center row-gap-2 px-3 shadow-sm" data-bs-theme="light">
 		<div class="d-flex w-100 w-sm-auto justify-content-between align-items-center">
 			<a href="#" class="text-decoration-none">
 				<h2 class="navbar-brand m-0">UEvents</h2>
@@ -84,13 +85,13 @@
 					</ul>
 				</li>
 				
-				<li class="nav-item dropdown position-relative">
+				<li class="nav-item dropdown position-relative" id="accountDropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						My Account <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm" style="right: 0; left: auto;">
-						<li> <a class="dropdown-item" href="#">Sign Up</a></li>
-						<li> <a class="dropdown-item" href="#">Login</a></li>
+						<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a></li>
+						<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -132,11 +133,11 @@
 			</div>
 			
 			<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="carousel-control-prev-icon"></span>
 				<span class="visually-hidden">Previous</span>
 			</button>
 			<button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="carousel-control-next-icon"></span>
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
@@ -184,342 +185,344 @@
 		</div>
 	</section>
 
-	<!-- Featured events -->
-	<section>
+	<main class="container py-4 flex-grow-1">
 		<!-- Featured events -->
-		<section class="mb-5">
-			<h2 class="text-center mb-4">Featured Events</h2>
-			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-4 mx-3 justify-content-center">
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\global_festival_2025.png" alt="Colorful promotional banner for Global Festival 2025">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">Global Festival 2025</h5>
-							<p class="card-text text-truncate-3">
-								Join the biggest cultural celebration in the heart of the city.
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+		<section>
+			<!-- Featured events -->
+			<section class="mb-5">
+				<h2 class="text-center mb-4">Featured Events</h2>
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mx-3 justify-content-center">
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\global_festival_2025.png" alt="Colorful promotional banner for Global Festival 2025">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">Global Festival 2025</h5>
+								<p class="card-text text-truncate-3">
+									Join the biggest cultural celebration in the heart of the city.
+								</p>
+								<a href="pages/view_event.html?id=1" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> ₱500.00</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> WorldFest Org
+								</li>
+							</ul>
 						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> ₱500.00</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> WorldFest Org
-							</li>
-						</ul>
+					</div>
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\defender_octa.avif" alt="Land Rover Defender Octa vehicle on display">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">Defender Octa Launch</h5>
+								<p class="card-text text-truncate-3">
+									Get ready to witness the epic launch of our newest product, Defender Octa - an event full of excitement and innovation!
+								</p>
+								<a href="pages/view_event.html?id=2" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> Free!</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> Land Rover
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\traders_fair.avif" alt="Trading and financial education conference setup">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">Traders Fair 2025 - (Financial Education Event)</h5>
+								<p class="card-text text-truncate-3">
+									Stocks, Forex, Futures, Cryptocurrency and Options, Investing and Brokers - all in one trading educational event!
+								</p>
+								<a href="pages/view_event.html?id=3" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> Free!</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> FINEXPO - Traders Fair & Traders Awards
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\movie_cause.avif" alt="Theater screening event for charity fundraising">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">Life Fairview Terraces Fund Raising</h5>
+								<p class="card-text text-truncate-3">
+									Brace yourselves for we are about to embark on a BIGGER SCREEN for a BIGGER PURPOSE!
+								</p>
+								<a href="pages/view_event.html?id=4" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> ₱950.00</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> Life An Every Nation Church
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\defender_octa.avif" alt="Land Rover Defender Octa vehicle on display">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">Defender Octa Launch</h5>
-							<p class="card-text text-truncate-3">
-								Get ready to witness the epic launch of our newest product, Defender Octa - an event full of excitement and innovation!
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> Free!</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> Land Rover
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\traders_fair.avif" alt="Trading and financial education conference setup">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">Traders Fair 2025 - (Financial Education Event)</h5>
-							<p class="card-text text-truncate-3">
-								Stocks, Forex, Futures, Cryptocurrency and Options, Investing and Brokers - all in one trading educational event!
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> Free!</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> FINEXPO - Traders Fair & Traders Awards
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\movie_cause.avif" alt="Theater screening event for charity fundraising">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">Life Fairview Terraces Fund Raising</h5>
-							<p class="card-text text-truncate-3">
-								Brace yourselves for we are about to embark on a BIGGER SCREEN for a BIGGER PURPOSE!
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> ₱950.00</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> Life An Every Nation Church
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Music events -->
-		<section class="mb-5">
-			<h2 class="text-center mb-4">Music Events</h2>
-			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-4 mx-3 justify-content-center">
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\ubermensch.jpg" alt="G-DRAGON in dramatic pose during Übermensch Tour">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">G-DRAGON: Übermensch Tour</h5>
-							<p class="card-text text-truncate-3">
-								K-pop icon G-DRAGON performs his long-awaited solo show with powerful visuals and stagecraft.
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+			<!-- Music events -->
+			<section class="mb-5">
+				<h2 class="text-center mb-4">Music Events</h2>
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mx-3 justify-content-center">
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\ubermensch.jpg" alt="G-DRAGON in dramatic pose during Übermensch Tour">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">G-DRAGON: Übermensch Tour</h5>
+								<p class="card-text text-truncate-3">
+									K-pop icon G-DRAGON performs his long-awaited solo show with powerful visuals and stagecraft.
+								</p>
+								<a href="pages/view_event.html?id=5" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> ₱8,500.00</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> Wilbros Live
+								</li>
+							</ul>
 						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> ₱8,500.00</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> Wilbros Live
-							</li>
-						</ul>
+					</div>
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\boyz_ii_men2.jpg" alt="Boyz II Men performing on stage in Manila">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">Boyz II Men: Live in Manila</h5>
+								<p class="card-text text-truncate-3">
+									The iconic R&B group serenades fans with timeless hits and smooth harmonies.
+								</p>
+								<a href="pages/view_event.html?id=6" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> ₱1,200.00</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> Wilbros Live
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\snarky_puppy2.jpg" alt="Snarky Puppy band performing live on stage">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">Snarky Puppy: We Like It Here Tour</h5>
+								<p class="card-text text-truncate-3">
+									A celebration of their jazz-fusion masterpiece with a live set full of groove and musicianship.
+								</p>
+								<a href="pages/view_event.html?id=7" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> ₱4,910.00</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> Karpos Multimedia
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\hibana.jpg" alt="ADO in concert with spectacular lighting effects">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">ADO World Tour: Manila Stop</h5>
+								<p class="card-text text-truncate-3">
+									The mysterious J-pop artist known for anime soundtracks brings an immersive visual-musical experience.
+								</p>
+								<a href="pages/view_event.html?id=8" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> ₱3,200.00</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> Ovation Productions
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\boyz_ii_men2.jpg" alt="Boyz II Men performing on stage in Manila">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">Boyz II Men: Live in Manila</h5>
-							<p class="card-text text-truncate-3">
-								The iconic R&B group serenades fans with timeless hits and smooth harmonies.
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> ₱1,200.00</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> Wilbros Live
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\snarky_puppy2.jpg" alt="Snarky Puppy band performing live on stage">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">Snarky Puppy: We Like It Here Tour</h5>
-							<p class="card-text text-truncate-3">
-								A celebration of their jazz-fusion masterpiece with a live set full of groove and musicianship.
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> ₱4,910.00</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> Karpos Multimedia
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\hibana.jpg" alt="ADO in concert with spectacular lighting effects">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">ADO World Tour: Manila Stop</h5>
-							<p class="card-text text-truncate-3">
-								The mysterious J-pop artist known for anime soundtracks brings an immersive visual-musical experience.
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> ₱3,200.00</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> Ovation Productions
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Musicals & Theater -->
-		<section class="mb-5">
-			<h2 class="text-center mb-4">Musicals & Theater</h2>
-			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-4 mx-3 justify-content-center">
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\evan_hansen.webp" alt="Dear Evan Hansen musical promotional poster">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">Dear Evan Hansen</h5>
-							<p class="card-text text-truncate-3">
-								A heartwarming story of love, loss, and redemption.
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+			<!-- Musicals & Theater -->
+			<section class="mb-5">
+				<h2 class="text-center mb-4">Musicals & Theater</h2>
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mx-3 justify-content-center">
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\evan_hansen.webp" alt="Dear Evan Hansen musical promotional poster">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">Dear Evan Hansen</h5>
+								<p class="card-text text-truncate-3">
+									A heartwarming story of love, loss, and redemption.
+								</p>
+								<a href="pages/view_event.html?id=9" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> ₱1,200.00</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> GMG Productions
+								</li>
+							</ul>
 						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> ₱1,200.00</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> GMG Productions
-							</li>
-						</ul>
+					</div>
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\hamilton.webp" alt="Hamilton musical Manila production poster">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">Hamilton: Manila Premiere</h5>
+								<p class="card-text text-truncate-3">
+									in-Manuel Miranda’s revolutionary musical debuts in Manila, blending hip-hop, jazz, and history in a genre-defining theatrical experience.
+								</p>
+								<a href="pages/view_event.html?id=10" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> ₱4,200.00</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> GMG Productions
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\delia_d.jpg" alt="Promotional image for Delia D. musical production">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">Delia D.</h5>
+								<p class="card-text text-truncate-3">
+									An original Filipino musical spotlighting queer stories, set to the music of Jonathan Manalo. Bold, powerful, and proudly local.
+								</p>
+								<a href="pages/view_event.html?id=11" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> ₱2,500.00</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> TicketWorld PH
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\one_more_chance.webp" alt="One More Chance musical adaptation poster featuring Ben&Ben">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">One More Chance, The Musical</h5>
+								<p class="card-text text-truncate-3">
+									A stage adaptation of the hit film, featuring the music of Ben&Ben in a heartfelt romantic journey.
+								</p>
+								<a href="pages/view_event.html?id=12" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> ₱1,200.00</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> Philippine Educational Theater Association (PETA)
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\hamilton.webp" alt="Hamilton musical Manila production poster">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">Hamilton: Manila Premiere</h5>
-							<p class="card-text text-truncate-3">
-								in-Manuel Miranda’s revolutionary musical debuts in Manila, blending hip-hop, jazz, and history in a genre-defining theatrical experience.
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> ₱4,200.00</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> GMG Productions
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\delia_d.jpg" alt="Promotional image for Delia D. musical production">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">Delia D.</h5>
-							<p class="card-text text-truncate-3">
-								An original Filipino musical spotlighting queer stories, set to the music of Jonathan Manalo. Bold, powerful, and proudly local.
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> ₱2,500.00</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> TicketWorld PH
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\one_more_chance.webp" alt="One More Chance musical adaptation poster featuring Ben&Ben">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">One More Chance, The Musical</h5>
-							<p class="card-text text-truncate-3">
-								A stage adaptation of the hit film, featuring the music of Ben&Ben in a heartfelt romantic journey.
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> ₱1,200.00</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> Philippine Educational Theater Association (PETA)
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Gaming -->
-		<section class="mb-5">
-			<h2 class="text-center mb-4">Gaming</h2>
-			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-4 mx-3 justify-content-center">
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\valorant_masters_toronto.avif" alt="Valorant esports tournament stage in Toronto">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">Valorant Champions Tour: Masters Toronto</h5>
-							<p class="card-text text-truncate-3">
-								Top Valorant teams clash in Toronto for a chance to advance to Champions 2025 in Paris.
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+			<!-- Gaming -->
+			<section class="mb-5">
+				<h2 class="text-center mb-4">Gaming</h2>
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mx-3 justify-content-center">
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\valorant_masters_toronto.avif" alt="Valorant esports tournament stage in Toronto">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">Valorant Champions Tour: Masters Toronto</h5>
+								<p class="card-text text-truncate-3">
+									Top Valorant teams clash in Toronto for a chance to advance to Champions 2025 in Paris.
+								</p>
+								<a href="pages/view_event.html?id=13" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> Free!</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> Riot Games
+								</li>
+							</ul>
 						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> Free!</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> Riot Games
-							</li>
-						</ul>
+					</div>
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\global_gaming_expo.jpg" alt="Global Gaming Expo convention floor">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">Global Gaming Expo (G2E) 2025</h5>
+								<p class="card-text text-truncate-3">
+									The premier event for the global gaming industry, showcasing the latest innovations and trends shaping the future of gaming.
+								</p>
+								<a href="pages/view_event.html?id=14" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> ₱1,500.00</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> Global Gaming Expo
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\gamescom.webp" alt="Gamescom 2025 gaming convention entrance">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">Gamescom 2025
+								</h5>
+								<p class="card-text text-truncate-3">
+									The world's largest gaming event where developers showcase upcoming titles and gaming technology innovations.
+								</p>
+								<a href="pages/view_event.html?id=15" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> ₱1,200.00</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> Koelnmesse
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card event-card h-100">
+							<img class="card-img-top object-fit-cover" src="images\summer_game_fest.webp" alt="Summer Game Fest main stage presentation">
+							<div class="card-body d-flex flex-column mh-50">
+								<h5 class="card-title text-center">Summer Game Fest 2025</h5>
+								<p class="card-text text-truncate-3">
+									A global event celebrating the latest in gaming with world premieres, live performances, and exclusive content.
+								</p>
+								<a href="pages/view_event.html?id=16" class="btn btn-primary mx-auto mt-auto">Learn More</a>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><strong>Price:</strong> Free!</li>
+								<li class="list-group-item text-truncate-3">
+									<strong>Organizer:</strong> Summer Game Fest
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\global_gaming_expo.jpg" alt="Global Gaming Expo convention floor">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">Global Gaming Expo (G2E) 2025</h5>
-							<p class="card-text text-truncate-3">
-								The premier event for the global gaming industry, showcasing the latest innovations and trends shaping the future of gaming.
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> ₱1,500.00</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> Global Gaming Expo
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\gamescom.webp" alt="Gamescom 2025 gaming convention entrance">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">Gamescom 2025
-							</h5>
-							<p class="card-text text-truncate-3">
-								The world's largest gaming event where developers showcase upcoming titles and gaming technology innovations.
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> ₱1,200.00</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> Koelnmesse
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card event-card h-100">
-						<img class="card-img-top object-fit-cover" src="images\summer_game_fest.webp" alt="Summer Game Fest main stage presentation">
-						<div class="card-body d-flex flex-column mh-50">
-							<h5 class="card-title text-center">Summer Game Fest 2025</h5>
-							<p class="card-text text-truncate-3">
-								A global event celebrating the latest in gaming with world premieres, live performances, and exclusive content.
-							</p>
-							<a href="#" class="btn btn-primary mx-auto mt-auto">Learn More</a>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><strong>Price:</strong> Free!</li>
-							<li class="list-group-item text-truncate-3">
-								<strong>Organizer:</strong> Summer Game Fest
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			</section>
 		</section>
-	</section>
-	
-	<!-- Stay updated -->
-	<div class="text-center mx-3 mb-5">
-		<h3>Stay Updated</h3>
-		<p>Subscribe to get the latest event news and offers.</p>
 		
-		<div class="row justify-content-center">
-			<div class="col-9 col-sm-6 col-md-5">
-				<div class="input-group">
-					<input type="email" class="form-control" placeholder="Enter your email">
-					<button type="submit" class="btn btn-primary">
-						Subscribe
-					</button>
+		<!-- Stay updated -->
+		<div class="text-center mx-3 mb-5">
+			<h3>Stay Updated</h3>
+			<p>Subscribe to get the latest event news and offers.</p>
+			
+			<div class="row justify-content-center">
+				<div class="col-9 col-sm-6 col-md-5">
+					<div class="input-group shadow-sm">
+						<input type="email" class="form-control" placeholder="Enter your email">
+						<button type="submit" class="btn btn-primary">
+							Subscribe
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</main>
 
 	<!-- Footer -->
 	<footer class="bg-dark text-white text-center py-4">
@@ -531,6 +534,82 @@
 		</ul>
 	</footer>
 
+	<!-- Signup modal -->
+	<div class="modal fade" id="signupModal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<form>
+					<div class="modal-body">
+						<p>Please fill in this form to create an account.</p>
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+							<label for="fullName">Full Name</label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+							<label for="email">Email</label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+							<label for="password">Password</label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+							<label for="confirmPassword">Confirm Password</label>
+						</div>
+						<label class="form-label mb-2">I am interested in:</label>
+						<div class="form-check mb-2">
+							<input type="checkbox" class="form-check-input" id="attendeeCheck">
+							<label class="form-check-label" for="attendeeCheck">Discovering and attending events</label>
+						</div>
+						<div class="form-check mb-3">
+							<input type="checkbox" class="form-check-input" id="plannerCheck">
+							<label class="form-check-label" for="plannerCheck">Creating and managing events</label>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+						<button type="submit" class="btn btn-primary">Sign Up</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Login modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="loginModalLabel">Login</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<form id="loginForm">
+					<div class="modal-body">
+						<p>Please enter your credentials to log in.</p>
+						<div class="form-floating mb-3">
+							<input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required>
+							<label for="loginEmail">Email</label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required>
+							<label for="loginPassword">Password</label>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+						<button type="submit" class="btn btn-primary">Login</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="js/login.js"></script>
 </body>
 </html>
