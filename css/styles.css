@@ -63,8 +63,6 @@ h1, h2, h3, h4, h5, h6 {
     .text-md-reset { color: inherit !important; }
 }
 
-
-
 .text-truncate-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -77,7 +75,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .card-img-top {
         height: 50vw;
-        
         @media (min-width: 768px) { height: 30vw; }
         @media (min-width: 992px) { height: 15vw; }
     }

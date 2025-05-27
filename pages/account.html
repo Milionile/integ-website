@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UEvents - Your Event Marketplace</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="../css/account.css" rel="stylesheet">
+</head>
+<body class="bg-light min-vh-100 d-flex flex-column">
+	<div class="sticky-top">
+		<!-- Main navbar -->
+		<nav class="navbar navbar-expand-lg flex-column flex-sm-row bg-white align-items-center row-gap-2 px-3 shadow-sm" data-bs-theme="light">
+			<div class="d-flex w-100 w-sm-auto justify-content-between align-items-center">
+				<a href="../index.html" class="text-decoration-none">
+					<h2 class="navbar-brand m-0">UEvents</h2>
+				</a>
+				<!-- Navbar toggler for mobile view -->
+				<div class="d-block d-sm-none">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+			</div>
+			
+			<!-- Search bar -->
+			<form class="d-flex w-100 w-sm-auto flex-fill justify-content-sm-center">
+				<div class="input-group w-100 w-sm-75">
+					<input type="text" class="form-control border-end-0 rounded-start-3 rounded-end-0 shadow-none" placeholder="Search events...">
+					<input type="text" class="form-control d-none d-sm-block border-start-0 rounded-start-0 shadow-none" placeholder="Search location...">
+					<button type="submit" class="btn btn-primary rounded-end-3">
+						<i class="fa-solid fa-search fa-fw"></i>
+					</button>
+				</div>
+			</form>
+
+			<!-- Navbar toggler for tablet view -->
+			<div class="d-none d-sm-block">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+
+			<!-- Navbar links -->
+			<div class="collapse navbar-collapse flex-grow-0 align-self-start justify-content-sm-end" id="navbarNav">
+				<ul class="navbar-nav column-gap-1">
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+							Our Services <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
+						</a>
+						<ul class="dropdown-menu shadow-sm">
+							<li><a class="dropdown-item" href="#">Events</a></li>
+							<li><a class="dropdown-item" href="#">Create Events</a></li>
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+							Tickets <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
+						</a>
+						<ul class="dropdown-menu shadow-sm">
+							<li> <a class="dropdown-item" href="#">Purchase Tickets</a></li>
+						</ul>
+					</li>
+					
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+							Help Center <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
+						</a>
+						<ul class="dropdown-menu shadow-sm">
+							<li> <a class="dropdown-item" href="help.html">FAQs</a></li>
+							<li> <a class="dropdown-item" href="help.html">Contact Event Organizers</a></li>
+						</ul>
+					</li>
+					
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+							About Us <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
+						</a>
+						<ul class="dropdown-menu shadow-sm">
+							<li> <a class="dropdown-item" href="#">Who We Are</a></li>
+							<li> <a class="dropdown-item" href="#">Contact Us</a></li>
+							<li> <a class="dropdown-item" href="#">Privacy and Terms</a></li>
+						</ul>
+					</li>
+					
+					<li class="nav-item dropdown position-relative" id="accountDropdown">
+						<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+							My Account <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
+						</a>
+						<ul class="dropdown-menu shadow-sm" style="right: 0; left: auto;">
+							<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a></li>
+							<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Mobile nav menu -->
+		<div class="bg-white shadow-sm d-md-none">
+			<ul class="nav">
+				<li class="nav-item">
+					<a class="p-3 nav-link active" href="#">Contact Information</a>
+				</li>
+				<li class="nav-item">
+					<a class="p-3 nav-link" href="#">Change Email</a>
+				</li>
+				<li class="nav-item">
+					<a class="p-3 nav-link" href="#">Change Password</a>
+				</li>
+				<li class="nav-item">
+					<a class="p-3 nav-link" href="#">Payment</a>
+				</li>
+				<li class="nav-item">
+					<a class="p-3 nav-link" href="#">Linked Accounts</a>
+				</li>
+				<li class="nav-item">
+					<a class="p-3 nav-link" href="#">Email Preferences</a>
+				</li>
+				<li class="nav-item"></li>
+					<a class="p-3 nav-link" href="#">Personal Data</a>
+				</li>
+				<li class="nav-item">
+					<a class="p-3 nav-link text-danger" href="#">Close Account</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Desktop sidebar -->
+	<div id="desktopSidebar" class="bg-white shadow-sm d-none d-md-block position-fixed">
+		<ul class="nav flex-column">
+			<li class="nav-item">
+				<a class="p-3 nav-link active" href="#">Contact Information</a>
+			</li>
+			<li class="nav-item">
+				<a class="p-3 nav-link" href="#">Change Email</a>
+			</li>
+			<li class="nav-item">
+				<a class="p-3 nav-link" href="#">Change Password</a>
+			</li>
+			<li class="nav-item">
+				<a class="p-3 nav-link" href="#">Payment</a>
+			</li>
+			<li class="nav-item">
+				<a class="p-3 nav-link" href="#">Linked Accounts</a>
+			</li>
+			<li class="nav-item">
+				<a class="p-3 nav-link" href="#">Email Preferences</a>
+			</li>
+			<li class="nav-item">
+				<a class="p-3 nav-link" href="#">Personal Data</a>
+			</li>
+			<li class="nav-item">
+				<a class="p-3 nav-link text-danger" href="#">Close Account</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- Main content wrapper -->
+	<div class="d-flex flex-grow-1">
+		<!-- Spacer for sidebar width -->
+		<div id="sidebarSpacer" class="d-none d-md-block"></div>
+		
+		<!-- Main content area -->
+		<main class="container p-5 flex-grow-1">
+			<h2 class="fw-bold border-bottom pb-2 mb-4">Contact Information</h2>
+			<div class="container w-75">
+				<form id="accountForm">
+					<section id="contactInfo" class="mb-5 p-4 bg-white rounded shadow-sm">
+						<h5 class="border-bottom pb-2 mb-4">Personal</h5>
+						<div class="row mb-2">
+							<label for="prefix" class="col-sm-2 col-form-label">Prefix</label>
+							<div class="col-sm-4">
+								<select class="form-control" id="prefix">
+									<option>Mr.</option>
+									<option>Mrs.</option>
+									<option>Ms.</option>
+									<option>Dr.</option>
+								</select>
+							</div>
+							<label for="suffix" class="col-sm-2 col-form-label">Suffix</label>
+							<div class="col-sm-4">
+								<select class="form-control" id="suffix">
+									<option value="">Select suffix</option>
+									<option>Jr.</option>
+									<option>Sr.</option>
+									<option>II</option>
+									<option>III</option>
+									<option>IV</option>
+									<option>V</option>
+								</select>
+							</div>
+						</div>
+						<div class="row mb-2">
+							<label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="firstName">
+							</div>
+							<label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="lastName">
+							</div>
+						</div>
+						<div class="row mb-2">
+							<label for="pageUrl" class="col-sm-2 col-form-label">Social/Page URL</label>
+							<div class="col-sm-10">
+								<input type="url" class="form-control" id="pageUrl" placeholder="https://linkedin.com/in/username">
+							</div>
+						</div>
+						<div class="row mb-2">
+							<label for="homePhone" class="col-sm-2 col-form-label">Home Phone</label>
+							<div class="col-sm-4">
+								<input type="tel" class="form-control" id="homePhone">
+							</div>
+							<label for="cellPhone" class="col-sm-2 col-form-label">Cell Phone</label>
+							<div class="col-sm-4">
+								<input type="tel" class="form-control" id="cellPhone">
+							</div>
+						</div>
+						<div class="row mb-2">
+							<label for="jobTitle" class="col-sm-2 col-form-label">Job Title</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="jobTitle">
+							</div>
+							<label for="company" class="col-sm-2 col-form-label">Company</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="company">
+							</div>
+						</div>
+						<div class="row mb-4">
+							<label for="website" class="col-sm-2 col-form-label">Website</label>
+							<div class="col-sm-10">
+								<input type="url" class="form-control" id="website" placeholder="https://example.com">
+							</div>
+						</div>
+					</section>
+
+					<section id="homeAddress" class="mb-5 p-4 bg-white rounded shadow-sm">
+						<h5 class="border-bottom pb-2 mb-4">Home Address</h5>
+						<div class="row mb-2">
+							<label for="homeAddress1" class="col-sm-2 col-form-label">Address</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="homeAddress1" placeholder="Street address, P.O. box, company name">
+							</div>
+						</div>
+						<div class="row mb-2">
+							<label for="homeAddress2" class="col-sm-2 col-form-label">2nd Address</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="homeAddress2">
+							</div>
+						</div>
+						<div class="row mb-2">
+							<label for="homeCity" class="col-sm-2 col-form-label">City</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="homeCity">
+							</div>
+							<label for="homeZip" class="col-sm-2 col-form-label">Zip Code</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="homeZip">
+							</div>
+						</div>
+						<div class="row mb-4">
+							<label for="homeCountry" class="col-sm-2 col-form-label">Country</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="homeCountry">
+							</div>
+						</div>
+					</section>
+
+					<section id="shippingAddress" class="mb-5 p-4 bg-white rounded shadow-sm">
+						<h5 class="border-bottom pb-2 mb-4">Shipping Address</h5>
+						<div class="form-check mb-3">
+							<input type="checkbox" class="form-check-input" id="sameAsHome">
+							<label class="form-check-label" for="sameAsHome">Same as home address</label>
+						</div>
+						<div class="row mb-2">
+							<label for="shippingAddress1" class="col-sm-2 col-form-label">Address</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="shippingAddress1">
+							</div>
+						</div>
+						<div class="row mb-2">
+							<label for="shippingAddress2" class="col-sm-2 col-form-label">2nd Address</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="shippingAddress2">
+							</div>
+						</div>
+						<div class="row mb-2">
+							<label for="shippingCity" class="col-sm-2 col-form-label">City</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="shippingCity">
+							</div>
+							<label for="shippingZip" class="col-sm-2 col-form-label">Zip Code</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="shippingZip">
+							</div>
+						</div>
+						<div class="row mb-4">
+							<label for="shippingCountry" class="col-sm-2 col-form-label">Country</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="shippingCountry">
+							</div>
+						</div>
+					</section>
+
+					<section id="workAddress" class="mb-5 p-4 bg-white rounded shadow-sm">
+						<h5 class="border-bottom pb-2 mb-4">Work Address</h5>
+						<div class="row mb-2">
+							<label for="workAddress1" class="col-sm-2 col-form-label">Address</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="workAddress1">
+							</div>
+						</div>
+						<div class="row mb-2">
+							<label for="workAddress2" class="col-sm-2 col-form-label">2nd Address</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="workAddress2">
+							</div>
+						</div>
+						<div class="row mb-2">
+							<label for="workCity" class="col-sm-2 col-form-label">City</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="workCity">
+							</div>
+							<label for="workZip" class="col-sm-2 col-form-label">Zip Code</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="workZip">
+							</div>
+						</div>
+						<div class="row mb-4">
+							<label for="workCountry" class="col-sm-2 col-form-label">Country</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="workCountry">
+							</div>
+						</div>
+					</section>
+
+					<div class="d-flex gap-2 justify-content-end mt-4">
+						<button type="reset" class="btn btn-light">Reset</button>
+						<button type="submit" class="btn btn-primary px-4">Save Changes</button>
+					</div>
+				</form>
+			</div>
+		</main>
+	</div>
+
+	<!-- Footer -->
+	<footer class="bg-dark text-white text-center py-4">
+		<p class="mb-1">© 2025 UEvents. All rights reserved.</p>
+		<ul class="list-inline mb-0">
+			<li class="list-inline-item"><a href="#" class="text-decoration-none">Privacy & Terms</a></li>
+			<li class="list-inline-item"><a href="#" class="text-decoration-none">Contact</a></li>
+			<li class="list-inline-item"><a href="help.html" class="text-decoration-none">FAQs</a></li>
+		</ul>
+	</footer>
+
+	<!-- Signup modal -->
+	<div class="modal fade" id="signupModal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<form id="signupForm">
+					<div class="modal-body">
+						<p>Please fill in this form to create an account.</p>
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+							<label for="fullName">Full Name</label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+							<label for="email">Email</label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+							<label for="password">Password</label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+							<label for="confirmPassword">Confirm Password</label>
+						</div>
+						<label class="form-label mb-2">I am interested in:</label>
+						<div class="form-check mb-2">
+							<input type="checkbox" class="form-check-input" id="attendeeCheck">
+							<label class="form-check-label" for="attendeeCheck">Discovering and attending events</label>
+						</div>
+						<div class="form-check mb-3">
+							<input type="checkbox" class="form-check-input" id="plannerCheck">
+							<label class="form-check-label" for="plannerCheck">Creating and managing events</label>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+						<button type="submit" class="btn btn-primary">Sign Up</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Login modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="loginModalLabel">Login</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<form id="loginForm">
+					<div class="modal-body">
+						<p>Please enter your credentials to log in.</p>
+						<div class="form-floating mb-3">
+							<input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required>
+							<label for="loginEmail">Email</label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required>
+							<label for="loginPassword">Password</label>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+						<button type="submit" class="btn btn-primary">Login</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../js/login.js"></script>
+	<script src="../js/account.js"></script>
+</body>
+</html>
