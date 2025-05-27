@@ -304,7 +304,7 @@ export const events = [
     {
         id: "23",
         title: "Neon Rave Manila",
-        image: "https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?cs=srgb&dl=pexels-maumascaro-801863.jpg&fm=jpg",
+        image: "../images/valentine_jazz.jpg",
         description: "An electrifying neon-themed rave party featuring top local DJs and immersive light shows.",
         price: 1000,
         organizer: "Glow Party PH",
@@ -315,7 +315,7 @@ export const events = [
     {
         id: "24",
         title: "Cebu Beach Bash",
-        image: "https://images.pexels.com/photos/1117256/pexels-photo-1117256.jpeg?cs=srgb&dl=pexels-osvaldo-coelho-jr-388501-1117256.jpg&fm=jpg",
+        image: "../images/coffee_connect.jpg",
         description: "Sunset beach party in Cebu with live DJs, tropical cocktails, and local craft beer.",
         price: 800,
         organizer: "Island Sounds PH",
@@ -326,7 +326,7 @@ export const events = [
     {
         id: "42",
         title: "Binondo Chinese New Year Parade",
-        image: "https://images.pexels.com/photos/30494367/pexels-photo-30494367.jpeg?cs=srgb&dl=pexels-alexisricardoalaurin-30494367.jpg&fm=jpg",
+        image: "../images/binondo.jpg",
         description: "A lively street parade in Manila’s Chinatown with traditional dragon and lion dances to welcome the Lunar New Year.",
         price: 0,
         organizer: "Binondo Chamber of Commerce",
@@ -337,7 +337,7 @@ export const events = [
     {
         id: "43",
         title: "Monster Mash Manila",
-        image: "https://images.pexels.com/photos/787961/pexels-photo-787961.jpeg?cs=srgb&dl=pexels-olly-787961.jpg&fm=jpg",
+        image: "../images/monster_mash.jpg",
         description: "A spooky Halloween costume party with a live DJ, themed photo booth, and eerie decorations.",
         price: 500,
         organizer: "Nightlife Manila",
@@ -348,7 +348,7 @@ export const events = [
     {
         id: "52",
         title: "Makati Speed Dating",
-        image: "https://images.pexels.com/photos/7339615/pexels-photo-7339615.jpeg?cs=srgb&dl=pexels-cottonbro-7339615.jpg&fm=jpg",
+        image: "../images/speed_dating.jpg",
         description: "Fast-paced speed dating event for singles in Makati to meet and mingle in a fun, relaxed setting.",
         price: 300,
         organizer: "HeartMatch Manila",
@@ -359,7 +359,7 @@ export const events = [
     {
         id: "53",
         title: "Valentine Jazz & Wine",
-        image: "https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?cs=srgb&dl=pexels-maumascaro-801863.jpg&fm=jpg",
+        image: "../images/valentine_jazz.jpg",
         description: "An intimate Valentine’s Day evening with smooth jazz performances and wine tasting for couples and singles alike.",
         price: 1500,
         organizer: "Love Lounge PH",
@@ -370,7 +370,7 @@ export const events = [
     {
         id: "54",
         title: "Coffee & Connect",
-        image: "https://images.pexels.com/photos/1117256/pexels-photo-1117256.jpeg?cs=srgb&dl=pexels-osvaldo-coelho-jr-388501-1117256.jpg&fm=jpg",
+        image: "../images/coffee_connect.jpg",
         description: "Casual morning meet-up at a Quezon City cafe where singles can chat over coffee and pastries.",
         price: 150,
         organizer: "Cafe Culture Collective",

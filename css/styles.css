@@ -12,8 +12,9 @@
 }
 
 .btn-outline-primary {
-    --bs-btn-color: #c31835;
-    --bs-btn-border-color: #c31835;
+    --bs-btn-color: #6c757d;
+    --bs-btn-bg: #ffffff;
+    --bs-btn-border-color: #dee2e6;
     --bs-btn-hover-color: #ffffff;
     --bs-btn-hover-bg: #c31835;
     --bs-btn-hover-border-color: #c31835;
@@ -62,12 +63,7 @@ h1, h2, h3, h4, h5, h6 {
     .text-md-reset { color: inherit !important; }
 }
 
-/* ≥992px is Bootstrap large or "lg" */
-@media (min-width: 992px) {
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-}
+
 
 .text-truncate-3 {
     display: -webkit-box;

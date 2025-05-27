@@ -8,13 +8,10 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 	<link href="../css/styles.css" rel="stylesheet">
-	<link href="../css/view_event.css" rel="stylesheet">
-	<script type="module" src="../js/view_event.js"></script>
 </head>
 <body class="bg-light min-vh-100 d-flex flex-column">
 	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg flex-column flex-sm-row sticky-top bg-white align-items-center row-gap-2 px-3 shadow-sm"
-		data-bs-theme="light">
+	<nav class="navbar navbar-expand-lg flex-column flex-sm-row sticky-top bg-white align-items-center row-gap-2 px-3 shadow-sm" data-bs-theme="light">
 		<div class="d-flex w-100 w-sm-auto justify-content-between align-items-center">
 			<a href="../index.html" class="text-decoration-none">
 				<h2 class="navbar-brand m-0">UEvents</h2>
@@ -24,16 +21,14 @@
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-			</div>
+			</div>	
 		</div>
-
+		
 		<!-- Search bar -->
 		<form class="d-flex w-100 w-sm-auto flex-fill justify-content-sm-center justify-content-xl-end">
 			<div class="input-group w-100 w-sm-75">
-				<input type="text" class="form-control border-end-0 rounded-start-3 rounded-end-0 shadow-none"
-					placeholder="Search events...">
-				<input type="text" class="form-control d-none d-sm-block border-start-0 rounded-start-0 shadow-none"
-					placeholder="Search location...">
+				<input type="text" class="form-control border-end-0 rounded-start-3 rounded-end-0 shadow-none" placeholder="Search events...">
+				<input type="text" class="form-control d-none d-sm-block border-start-0 rounded-start-0 shadow-none" placeholder="Search location...">
 				<button type="submit" class="btn btn-primary rounded-end-3">
 					<i class="fa-solid fa-search fa-fw"></i>
 				</button>
@@ -68,7 +63,7 @@
 						<li> <a class="dropdown-item" href="#">Purchase Tickets</a></li>
 					</ul>
 				</li>
-
+				
 				<li class="nav-item dropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						Help Center <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
@@ -78,7 +73,7 @@
 						<li> <a class="dropdown-item" href="help.html">Contact Event Organizers</a></li>
 					</ul>
 				</li>
-
+				
 				<li class="nav-item dropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						About Us <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
@@ -89,120 +84,88 @@
 						<li> <a class="dropdown-item" href="#">Privacy and Terms</a></li>
 					</ul>
 				</li>
-
+				
 				<li class="nav-item dropdown position-relative" id="accountDropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						My Account <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm" style="right: 0; left: auto;">
-						<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign
-								Up</a></li>
-						<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log
-								In</a></li>
+						<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a></li>
+						<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a></li>
 					</ul>
 				</li>
 			</ul>
 		</div>
 	</nav>
-
-	<!-- Main content -->
+	
+    <!-- Main content -->
 	<main class="container py-5 flex-grow-1">
-		<div class="container">
-			<div class="row g-4">
-				<!-- Event details -->
-				<div class="col-lg-8">
-					<div class="card shadow-sm">
-						<img id="eventImage" src="" class="card-img-top object-fit-cover" alt="Event Image">
-						<div class="card-body mt-2">
-							<span id="salesBadge" class="badge text-bg-warning mb-3 px-3 py-2"
-								style="font-size: 0.85rem;">Sales end soon</span>
+		<div class="text-center">
+			<h1 class="display-2 fw-bold">Help Center</h1>
+			<p class="fs-5">How can we help?</p>
+			<input type="text" class="form-control mx-auto mb-4 w-25" placeholder="Search help articles...">
+		</div>
 
-							<h6 class="card-subtitle text-body-secondary mb-1">
-								<span id="eventDate">1970-12-31</span> • <span id="eventLocation">Address,
-									Address</span>
-							</h6>
-							<h2 id="eventTitle" class="card-title">Event Title</h2>
-
-							<p id="eventDescription" class="card-text">This is a description of the event.</p>
-						</div>
-						<div class="card-footer bg-transparent border-0 mb-2">
-							By <strong id="organizerName">Organizer Name</strong>
-							<button class="btn btn-light btn-outline-dark ms-2">Follow</button>
-						</div>
-					</div>
+		<div class="container w-75 mb-4">
+			<h4 class="mb-3">Featured Articles</h4>
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-3">
+				<div class="col">
+					<a class="btn btn-outline-primary w-100 h-100" href="#">
+						Find your tickets
+					</a>
 				</div>
-
-				<!-- Checkout -->
-				<div class="col-lg-4">
-					<div class="card shadow-sm sticky-top">
-						<form id="ticketForm" class="card-body">
-							<!-- General admission header -->
-							<div class="d-flex justify-content-between align-items-center mb-2">
-								<h5 class="card-title">General Admission</h5>
-								<h5 id="ticketPrice" class="card-title text-primary">₱0.00</h5>
-							</div>
-
-							<!-- Event day selection -->
-							<div class="d-none mb-3">
-								<label for="eventDay" class="form-label fw-bold">Choose Day:</label>
-								<select id="eventDay" name="eventDay" class="form-select" required>
-
-								</select>
-							</div>
-
-							<!-- Seat type and picker -->
-							<div class="d-none">
-								<!-- Seat type selection -->
-								<div class="mb-3">
-									<label for="seatType" class="form-label fw-bold">Seat Type:</label>
-									<select id="seatType" name="seatType" class="form-select" required>
-
-									</select>
-								</div>
-
-								<!-- Seat picker grid -->
-								<div class="mb-3">
-									<label class="form-label fw-bold">Pick Your Seat:</label>
-									<div id="seatPicker" class="d-flex flex-wrap gap-2">
-										<!-- Seats will be populated by JavaScript -->
-									</div>
-									<input type="hidden" id="selectedSeatInput" name="selectedSeat" required>
-									<p id="selectedSeat" class="text-muted mt-1 mb-0" style="display: none;">
-										Selected seat: <span id="seatNumber"></span>
-									</p>
-								</div>
-							</div>
-
-							<!-- Ticket counter -->
-							<div id="ticket-quantity" class="input-group mb-2 mt-2">
-								<button class="btn btn-outline-secondary" type="button" id="decreaseQuantity">
-									<i class="fa-solid fa-minus fa-fw fa-2xs"></i>
-								</button>
-								<input type="text" class="form-control" value="1" name="ticketQuantity"
-									id="ticketQuantity" required readonly>
-								<span class="input-group-text">ticket/s</span>
-								<button class="btn btn-outline-secondary" type="button" id="increaseQuantity">
-									<i class="fa-solid fa-plus fa-fw fa-2xs"></i>
-								</button>
-
-							</div>
-							<p id="serviceFee" class="card-text text-body-secondary">+ ₱0.00 fee</p>
-
-							<!-- Checkout button -->
-							<button type="submit" id="checkoutButton"
-								class="btn btn-primary text-center fw-bold w-100 py-2 my-1">
-								Check out for ₱0.00
-							</button>
-							<div class="w-100 text-center text-body-secondary">
-								<small id="feeNote"><span class="text-danger fw-bold">*</span> Includes 5% service
-									fee</small>
-							</div>
-						</form>
-					</div>
+				<div class="col">
+					<a class="btn btn-outline-primary w-100 h-100" href="#">
+						Request a refund
+					</a>
+				</div>
+				<div class="col">
+					<a class="btn btn-outline-primary w-100 h-100" href="#">
+						Contact the event organizer
+					</a>
+				</div>
+				<div class="col">
+					<a class="btn btn-outline-primary w-100 h-100" href="#">
+						What is this charge from UEvents?
+					</a>
+				</div>
+				<div class="col">
+					<a class="btn btn-outline-primary w-100 h-100" href="#">
+						Transfer tickets to someone else
+					</a>
+				</div>
+				<div class="col">
+					<a class="btn btn-outline-primary w-100 h-100" href="#">
+						Edit your order information
+					</a>
 				</div>
 			</div>
 		</div>
 
+		<div class="container w-75">
+			<h4 class="mb-3">Browse by Topic</h4>
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-3">
+				<div class="col">
+					<a class="btn btn-outline-primary w-100 h-100" href="#">
+						Buy and register
+					</a>
+				</div>
+				<div class="col">
+					<a class="btn btn-outline-primary w-100 h-100" href="#">
+						Your tickets
+					</a>
+				</div>
+				<div class="col">
+					<a class="btn btn-outline-primary w-100 h-100" href="#">
+						Your account
+					</a>
+				</div>
+				<div class="col w-100">
+					<a class="btn btn-outline-primary w-100 h-100" href="#">
+						Terms and policies
+					</a>
+				</div>
+			</div>
 		</div>
 	</main>
 
@@ -212,7 +175,7 @@
 		<ul class="list-inline mb-0">
 			<li class="list-inline-item"><a href="#" class="text-decoration-none">Privacy & Terms</a></li>
 			<li class="list-inline-item"><a href="#" class="text-decoration-none">Contact</a></li>
-			<li class="list-inline-item"><a href="help.html" class="text-decoration-none">FAQs</a></li>
+			<li class="list-inline-item"><span href="#" class="text-decoration-none">FAQs</span></li>
 		</ul>
 	</footer>
 
@@ -228,8 +191,7 @@
 					<div class="modal-body">
 						<p>Please fill in this form to create an account.</p>
 						<div class="form-floating mb-3">
-							<input type="text" class="form-control" id="fullName" placeholder="Enter your full name"
-								required>
+							<input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
 							<label for="fullName">Full Name</label>
 						</div>
 						<div class="form-floating mb-3">
@@ -237,13 +199,11 @@
 							<label for="email">Email</label>
 						</div>
 						<div class="form-floating mb-3">
-							<input type="password" class="form-control" id="password" placeholder="Enter your password"
-								required>
+							<input type="password" class="form-control" id="password" placeholder="Enter your password" required>
 							<label for="password">Password</label>
 						</div>
 						<div class="form-floating mb-3">
-							<input type="password" class="form-control" id="confirmPassword"
-								placeholder="Confirm your password" required>
+							<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
 							<label for="confirmPassword">Confirm Password</label>
 						</div>
 						<label class="form-label mb-2">I am interested in:</label>
@@ -277,13 +237,11 @@
 					<div class="modal-body">
 						<p>Please enter your credentials to log in.</p>
 						<div class="form-floating mb-3">
-							<input type="email" class="form-control" id="loginEmail" placeholder="Enter your email"
-								required>
+							<input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required>
 							<label for="loginEmail">Email</label>
 						</div>
 						<div class="form-floating mb-3">
-							<input type="password" class="form-control" id="loginPassword"
-								placeholder="Enter your password" required>
+							<input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required>
 							<label for="loginPassword">Password</label>
 						</div>
 					</div>
@@ -299,5 +257,4 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="../js/login.js"></script>
 </body>
-
 </html>

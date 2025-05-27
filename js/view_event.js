@@ -77,38 +77,36 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	// Handle seat type selection if available
-	if (event.seatTypes && event.seatTypes.length > 0) {
-		const gaHeader = ticketPriceEl.previousElementSibling;
-		if (gaHeader) gaHeader.style.display = "none";
-		ticketPriceEl.style.display = "none";
-		const seatTypeContainer = seatTypeSelect.closest(".d-none");
-		if (seatTypeContainer) seatTypeContainer.classList.remove("d-none");
-		seatTypeSelect.innerHTML = "";
-		event.seatTypes.forEach(st => {
-			const option = document.createElement("option");
-			option.value = st.price; // store seat price as value
-			option.textContent = `${st.type} - ${formatPrice(st.price)}`;
-			seatTypeSelect.appendChild(option);
-		});
+	if (event.seatTypes?.length) {
+		[ticketPriceEl, ticketPriceEl.previousElementSibling].forEach(el => 
+			el?.style && (el.style.display = "none")
+		);
+		const container = seatTypeSelect.closest(".d-none");
+		container?.classList.remove("d-none");
+		
+		seatTypeSelect.innerHTML = event.seatTypes
+			.map(st => `<option value="${st.price}">${st.type} - ${formatPrice(st.price)}</option>`)
+			.join("");
+			
 		seatTypeSelect.addEventListener("change", () => {
 			updateTotalPrice();
 			refreshSeatPicker();
 		});
 	} else {
-		seatTypeSelect.parentElement.classList.add("d-none");
-		getEl("seatPicker").parentElement.classList.add("d-none");
+		[seatTypeSelect, getEl("seatPicker")].forEach(el => 
+			el.parentElement.classList.add("d-none")
+		);
 	}
 
 	// Set up ticket quantity controls
-	getEl("decreaseQuantity").addEventListener("click", () => {
-		const newQuantity = Math.max(1, parseInt(quantityInput.value) - 1);
-		quantityInput.value = newQuantity;
-		updateTotalPrice();
-	});
-	getEl("increaseQuantity").addEventListener("click", () => {
-		const newQuantity = parseInt(quantityInput.value) + 1;
-		quantityInput.value = newQuantity;
-		updateTotalPrice();
+	["decrease", "increase"].forEach(action => {
+		getEl(`${action}Quantity`).addEventListener("click", () => {
+			const qty = parseInt(quantityInput.value);
+			quantityInput.value = action === "decrease" 
+				? Math.max(1, qty - 1) 
+				: qty + 1;
+			updateTotalPrice();
+		});
 	});
 
 	// Final price update: use seat type price (if available) multiplied by ticket count plus a 5% fee
