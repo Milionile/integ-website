@@ -18,18 +18,3 @@
     min-width: 50px;
     max-width: 10vh;
 }
-
-.event-card {
-    transition: transform 0.2s, box-shadow 0.2s;
-
-    .card-img-top {
-        height: 50vw;
-        
-        @media (min-width: 768px) { height: 30vw; }
-        @media (min-width: 992px) { height: 15vw; }
-    }
-}
-.event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}

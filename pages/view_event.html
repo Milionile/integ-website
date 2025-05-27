@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,6 @@
 	<link href="../css/view_event.css" rel="stylesheet">
 	<script type="module" src="../js/view_event.js"></script>
 </head>
-
 <body class="bg-light min-vh-100 d-flex flex-column">
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg flex-column flex-sm-row sticky-top bg-white align-items-center row-gap-2 px-3 shadow-sm"
@@ -179,19 +177,24 @@
 								<button class="btn btn-outline-secondary" type="button" id="decreaseQuantity">
 									<i class="fa-solid fa-minus fa-fw fa-2xs"></i>
 								</button>
-								<input type="text" class="form-control" value="1" name="ticketQuantity" id="ticketQuantity" required readonly>
+								<input type="text" class="form-control" value="1" name="ticketQuantity"
+									id="ticketQuantity" required readonly>
+								<span class="input-group-text">ticket/s</span>
 								<button class="btn btn-outline-secondary" type="button" id="increaseQuantity">
 									<i class="fa-solid fa-plus fa-fw fa-2xs"></i>
 								</button>
+
 							</div>
 							<p id="serviceFee" class="card-text text-body-secondary">+ ₱0.00 fee</p>
 
 							<!-- Checkout button -->
-							<button type="submit" id="checkoutButton" class="btn btn-primary text-center fw-bold w-100 py-2 my-1">
+							<button type="submit" id="checkoutButton"
+								class="btn btn-primary text-center fw-bold w-100 py-2 my-1">
 								Check out for ₱0.00
 							</button>
 							<div class="w-100 text-center text-body-secondary">
-								<small id="feeNote"><span class="text-danger fw-bold">*</span> Includes 5% service fee</small>
+								<small id="feeNote"><span class="text-danger fw-bold">*</span> Includes 5% service
+									fee</small>
 							</div>
 						</form>
 					</div>
@@ -220,7 +223,7 @@
 					<h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 				</div>
-				<form>
+				<form id="signupForm">
 					<div class="modal-body">
 						<p>Please fill in this form to create an account.</p>
 						<div class="form-floating mb-3">

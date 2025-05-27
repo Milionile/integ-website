@@ -98,8 +98,20 @@
 	</nav>
 	
     <!-- Main content -->
-	<main class="container py-5 flex-grow-1">
-        
+	<main class="container py-5 flex-grow-1 text-center">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb justify-content-center">
+				<li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+				<li class="breadcrumb-item active">Current Category</li>
+			</ol>
+		</nav>
+		
+		<h1 class="display-4 fw-bold">Category Name</h1>
+		<p class="fs-5">Try adding "?category=music" to the URL!</p>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mx-3 justify-content-center text-start" id="eventContainer">
+            
+        </div>
 	</main>
 
 	<!-- Footer -->
@@ -189,5 +201,6 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="../js/login.js"></script>
+	<script type="module" src="../js/category.js"></script>
 </body>
 </html>

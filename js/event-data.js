@@ -7,7 +7,8 @@ export const events = [
         price: 500,
         organizer: "WorldFest Org",
         date: "2025-08-12",
-        location: "Manila, Philippines"
+        location: "Manila, Philippines",
+        category: "food_and_drink"
     },
     {
         id: "2",
@@ -17,7 +18,8 @@ export const events = [
         price: 0,
         organizer: "Land Rover",
         date: "2025-05-21",
-        location: "80 Eulogio Rodriguez Jr. Avenue Quezon City, NCR 1110"
+        location: "80 Eulogio Rodriguez Jr. Avenue Quezon City, NCR 1110",
+        category: "business"
     },
     {
         id: "3",
@@ -27,7 +29,8 @@ export const events = [
         price: 0,
         organizer: "FINEXPO - Traders Fair & Traders Awards",
         date: "2025-05-24",
-        location: "Edsa Shangri-La, Manila"
+        location: "Edsa Shangri-La, Manila",
+        category: "business"
     },
     {
         id: "4",
@@ -37,7 +40,8 @@ export const events = [
         price: 950,
         organizer: "Life An Every Nation Church",
         date: "2025-05-24",
-        location: "Ayala Malls Fairview Terraces"
+        location: "Ayala Malls Fairview Terraces",
+        category: "holidays"
     },
     {
         id: "5",
@@ -70,7 +74,8 @@ export const events = [
                 "VIP": ["B1"],
                 "Regular": ["C2", "C3"]
             }
-        }
+        },
+        category: "music"
     },
     {
         id: "6",
@@ -95,7 +100,8 @@ export const events = [
                 "VIP": ["A3"],
                 "Regular": ["B2"]
             }
-        }
+        },
+        category: "music"
     },
     {
         id: "7",
@@ -105,7 +111,8 @@ export const events = [
         price: 4910,
         organizer: "Karpos Multimedia",
         date: "2025-05-27",
-        location: "The Filinvest Tent, Muntinlupa City"
+        location: "The Filinvest Tent, Muntinlupa City",
+        category: "music"
     },
     {
         id: "8",
@@ -115,7 +122,8 @@ export const events = [
         price: 3200,
         organizer: "Ovation Productions",
         date: "2025-05-08",
-        location: "SM Mall of Asia Arena, Pasay"
+        location: "SM Mall of Asia Arena, Pasay",
+        category: "music"
     },
     {
         id: "9",
@@ -125,7 +133,8 @@ export const events = [
         price: 1200,
         organizer: "GMG Productions",
         date: "2025-09-04",
-        location: "Solaire"
+        location: "Solaire",
+        category: "performing_arts"
     },
     {
         id: "10",
@@ -135,27 +144,30 @@ export const events = [
         price: 4200,
         organizer: "GMG Productions",
         date: "2025-09-17",
-        location: "The Theatre at Solaire, Parañaque City"
+        location: "The Theatre at Solaire, Parañaque City",
+        category: "performing_arts"
     },
     {
         id: "11",
         title: "Delia D.",
-        image: "../Pictures/event11.jpg",
+        image: "../images/delia_d.jpg",
         description: "An original Filipino musical spotlighting queer stories, set to the music of Jonathan Manalo. Bold, powerful, and proudly local.",
         price: 2500,
         organizer: "TicketWorld PH",
         date: "2025-04-25",
-        location: "Newport Performing Arts Theater, Pasay City"
+        location: "Newport Performing Arts Theater, Pasay City",
+        category: "performing_arts"
     },
     {
         id: "12",
         title: "One More Chance, The Musical",
-        image: "../Pictures/event12.webp",
+        image: "../images/one_more_chance.webp",
         description: "A stage adaptation of the hit film, featuring the music of Ben&Ben in a heartfelt romantic journey.",
         price: 1200,
         organizer: "Philippine Educational Theater Association (PETA)",
         date: "2025-08-22",
-        location: "PETA Theater Center, New Manila, Quezon City"
+        location: "PETA Theater Center, New Manila, Quezon City",
+        category: "performing_arts"
     },
     {
         id: "13",
@@ -165,7 +177,8 @@ export const events = [
         price: 0,
         organizer: "Riot Games",
         date: "2025-06-07",
-        location: "Online / Toronto, Canada (Streaming Available)"
+        location: "Online / Toronto, Canada (Streaming Available)",
+        category: "hobbies"
     },
     {
         id: "14",
@@ -175,7 +188,8 @@ export const events = [
         price: 1500,
         organizer: "Global Gaming Expo",
         date: "2025-10-06",
-        location: "The Venetian Expo, Las Vegas, USA"
+        location: "The Venetian Expo, Las Vegas, USA",
+        category: "hobbies"
     },
     {
         id: "15",
@@ -185,7 +199,8 @@ export const events = [
         price: 1200,
         organizer: "Koelnmesse",
         date: "2025-08-20",
-        location: "Koelnmesse, Cologne, Germany"
+        location: "Koelnmesse, Cologne, Germany",
+        category: "hobbies"
     },
     {
         id: "16",
@@ -195,86 +210,172 @@ export const events = [
         price: 0,
         organizer: "Summer Game Fest",
         date: "2025-06-06",
-        location: "YouTube Theater, Los Angeles, USA"
+        location: "YouTube Theater, Los Angeles, USA",
+        category: "hobbies"
     },
     {
         id: "21",
         title: "Manila Night Bash",
-        image: "../Pictures/nightlife1.jpg",
+        image: "../images/manila_nightclub.jpg",
         description: "Dance the night away with top DJs and a vibrant crowd.",
         price: 1000,
         organizer: "PartyLife PH",
         date: "2025-06-10",
-        location: "Manila, Philippines"
+        location: "Manila, Philippines",
+        category: "nightlife"
     },
     {
         id: "31",
         title: "Broadway in Manila",
-        image: "../Pictures/performing-arts1.jpg",
+        image: "../images/broadway_manila.jpg",
         description: "A night of world-class musical performances.",
         price: 2500,
         organizer: "StageWorks",
         date: "2025-07-01",
-        location: "Cultural Center of the Philippines"
+        location: "Cultural Center of the Philippines",
+        category: "performing_arts"
     },
     {
         id: "41",
         title: "Christmas Market Festival",
-        image: "../Pictures/holidays1.jpg",
+        image: "../images/christmas_market.jpg",
         description: "Celebrate the holidays with food, music, and gifts.",
         price: 0,
         organizer: "Holiday Events PH",
         date: "2025-12-15",
-        location: "Bonifacio High Street"
+        location: "Bonifacio High Street",
+        category: "holidays"
     },
     {
         id: "51",
         title: "Singles Mixer Night",
-        image: "../Pictures/dating1.jpg",
+        image: "../images/singles_mixer.jpg",
         description: "Meet new people and maybe find your match!",
         price: 500,
         organizer: "LoveConnect",
         date: "2025-06-20",
-        location: "Makati, Philippines"
+        location: "Makati, Philippines",
+        category: "dating"
     },
     {
         id: "61",
         title: "DIY Crafting Workshop",
-        image: "../Pictures/hobbies1.jpg",
+        image: "../images/craft_workshop.jpg",
         description: "Unleash your creativity with hands-on crafting.",
         price: 300,
         organizer: "CraftyHands",
         date: "2025-07-10",
-        location: "Quezon City"
+        location: "Quezon City",
+        category: "hobbies"
     },
     {
         id: "71",
         title: "Startup Summit 2025",
-        image: "../Pictures/business1.jpg",
+        image: "../images/startup_summit.jpg",
         description: "Where innovation meets opportunity. Meet top tech founders.",
         price: 1200,
         organizer: "InnovateNow PH",
         date: "2025-09-05",
-        location: "Cebu, Philippines"
+        location: "Cebu, Philippines",
+        category: "business"
     },
     {
         id: "81",
         title: "Food & Drink Expo",
-        image: "../Pictures/food1.jpg",
+        image: "../images/food-expo.png",
         description: "Taste the best food and drinks from around the world.",
         price: 200,
         organizer: "Foodies United",
         date: "2025-08-15",
-        location: "SMX Convention Center"
+        location: "SMX Convention Center",
+        category: "food_and_drink"
     },
     {
         id: "22",
         title: "A Night Out in Manila",
-        image: "../Pictures/nightlife.avif",
+        image: "../images/manila_nightlife.jpg",
         description: "City life can be lonely, especially when you're surrounded by so many people. Take the opportunity to meet others hoping for new connections",
         price: 700,
         organizer: "Ermantourage Europe & US",
         date: "2025-05-23",
-        location: "Blackbird Makati"
+        location: "Blackbird Makati",
+        category: "nightlife"
+    },
+    {
+        id: "23",
+        title: "Neon Rave Manila",
+        image: "https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?cs=srgb&dl=pexels-maumascaro-801863.jpg&fm=jpg",
+        description: "An electrifying neon-themed rave party featuring top local DJs and immersive light shows.",
+        price: 1000,
+        organizer: "Glow Party PH",
+        date: "2025-07-15",
+        location: "Manila, Philippines",
+        category: "nightlife"
+    },
+    {
+        id: "24",
+        title: "Cebu Beach Bash",
+        image: "https://images.pexels.com/photos/1117256/pexels-photo-1117256.jpeg?cs=srgb&dl=pexels-osvaldo-coelho-jr-388501-1117256.jpg&fm=jpg",
+        description: "Sunset beach party in Cebu with live DJs, tropical cocktails, and local craft beer.",
+        price: 800,
+        organizer: "Island Sounds PH",
+        date: "2025-08-01",
+        location: "Mactan Island, Cebu, Philippines",
+        category: "nightlife"
+    },
+    {
+        id: "42",
+        title: "Binondo Chinese New Year Parade",
+        image: "https://images.pexels.com/photos/30494367/pexels-photo-30494367.jpeg?cs=srgb&dl=pexels-alexisricardoalaurin-30494367.jpg&fm=jpg",
+        description: "A lively street parade in Manila’s Chinatown with traditional dragon and lion dances to welcome the Lunar New Year.",
+        price: 0,
+        organizer: "Binondo Chamber of Commerce",
+        date: "2025-01-29",
+        location: "Binondo, Manila, Philippines",
+        category: "holidays"
+    },
+    {
+        id: "43",
+        title: "Monster Mash Manila",
+        image: "https://images.pexels.com/photos/787961/pexels-photo-787961.jpeg?cs=srgb&dl=pexels-olly-787961.jpg&fm=jpg",
+        description: "A spooky Halloween costume party with a live DJ, themed photo booth, and eerie decorations.",
+        price: 500,
+        organizer: "Nightlife Manila",
+        date: "2025-10-31",
+        location: "Greenbelt Park, Makati, Philippines",
+        category: "holidays"
+    },
+    {
+        id: "52",
+        title: "Makati Speed Dating",
+        image: "https://images.pexels.com/photos/7339615/pexels-photo-7339615.jpeg?cs=srgb&dl=pexels-cottonbro-7339615.jpg&fm=jpg",
+        description: "Fast-paced speed dating event for singles in Makati to meet and mingle in a fun, relaxed setting.",
+        price: 300,
+        organizer: "HeartMatch Manila",
+        date: "2025-07-20",
+        location: "Makati, Philippines",
+        category: "dating"
+    },
+    {
+        id: "53",
+        title: "Valentine Jazz & Wine",
+        image: "https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?cs=srgb&dl=pexels-maumascaro-801863.jpg&fm=jpg",
+        description: "An intimate Valentine’s Day evening with smooth jazz performances and wine tasting for couples and singles alike.",
+        price: 1500,
+        organizer: "Love Lounge PH",
+        date: "2025-02-14",
+        location: "BGC, Taguig, Philippines",
+        category: "dating"
+    },
+    {
+        id: "54",
+        title: "Coffee & Connect",
+        image: "https://images.pexels.com/photos/1117256/pexels-photo-1117256.jpeg?cs=srgb&dl=pexels-osvaldo-coelho-jr-388501-1117256.jpg&fm=jpg",
+        description: "Casual morning meet-up at a Quezon City cafe where singles can chat over coffee and pastries.",
+        price: 150,
+        organizer: "Cafe Culture Collective",
+        date: "2025-07-05",
+        location: "Quezon City, Philippines",
+        category: "dating"
     }
 ];

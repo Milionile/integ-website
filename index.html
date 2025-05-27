@@ -14,7 +14,7 @@
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg flex-column flex-sm-row sticky-top bg-white align-items-center row-gap-2 px-3 shadow-sm" data-bs-theme="light">
 		<div class="d-flex w-100 w-sm-auto justify-content-between align-items-center">
-			<a href="#" class="text-decoration-none">
+			<a href="index.html" class="text-decoration-none">
 				<h2 class="navbar-brand m-0">UEvents</h2>
 			</a>
 			<!-- Navbar toggler for mobile view -->
@@ -150,43 +150,43 @@
 		<h2 class="mb-2">Categories</h2>
 		<div id="categories-links" class="row w-75 mx-auto flex-nowrap overflow-x-auto column-gap-2">
 			<!-- Music, Nightlife, Performing & Visual Arts, Holidays, Dating, Hobbies, Business, Food & Drink-->
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+			<a href="pages/category.html?category=music" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
 				<img src="icons/music.svg" alt="Music category icon showing musical notes" class="mx-auto">
 				<span class="mt-2">Music</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+			<a href="pages/category.html?category=nightlife" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
 				<img src="icons/night-life.svg" alt="Nightlife category icon showing city at night" class="mx-auto">
 				<span class="mt-2">Nightlife</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+			<a href="pages/category.html?category=performing_arts" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
 				<img src="icons/performing-arts.svg" alt="Performing arts category icon showing theater masks" class="mx-auto">
 				<span class="mt-2">Performances</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+			<a href="pages/category.html?category=holidays" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
 				<img src="icons/holiday.svg" alt="Holiday category icon showing celebration decorations" class="mx-auto">
 				<span class="mt-2">Holidays</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+			<a href="pages/category.html?category=dating" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
 				<img src="icons/dating.svg" alt="Dating category icon showing heart symbol" class="mx-auto">
 				<span class="mt-2">Dating</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+			<a href="pages/category.html?category=hobbies" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
 				<img src="icons/hobbies.svg" alt="Hobbies category icon showing craft supplies" class="mx-auto">
 				<span class="mt-2">Hobbies</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+			<a href="pages/category.html?category=business" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
 				<img src="icons/business.svg" alt="Business category icon showing briefcase" class="mx-auto">
 				<span class="mt-2">Business</span>
 			</a>
-			<a href="#" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
+			<a href="pages/category.html?category=food_and_drink" class="col d-flex flex-column text-body text-decoration-none justify-content-center">
 				<img src="icons/food.svg" alt="Food and drink category icon showing utensils and glass" class="mx-auto">
 				<span class="mt-2">Food & Drink</span>
 			</a>
 		</div>
 	</section>
 
-	<main class="container py-4 flex-grow-1">
-		<!-- Featured events -->
+	<main class="container py-5 flex-grow-1">
+		<!-- Events -->
 		<section>
 			<!-- Featured events -->
 			<section class="mb-5">
@@ -542,7 +542,7 @@
 					<h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 				</div>
-				<form>
+				<form id="signupForm">
 					<div class="modal-body">
 						<p>Please fill in this form to create an account.</p>
 						<div class="form-floating mb-3">

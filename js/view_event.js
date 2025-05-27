@@ -37,7 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		quantityInput = getEl("ticketQuantity");
 
 	// Populate basic event info
-	eventImage.src = event.image;
+	eventImage.src = event.image || 'https://placehold.co/600x400';
+	eventImage.onerror = () => {
+		eventImage.src = 'https://placehold.co/600x400';
+	};
 	eventTitle.textContent = event.title;
 	eventDateEl.textContent = event.date;
 	eventLocationEl.textContent = event.location;
