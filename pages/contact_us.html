@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Help Center | UEvents</title>
+	<title>Contact Us - UEvents</title>
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -72,7 +72,7 @@
 					</a>
 					<ul class="dropdown-menu shadow-sm">
 						<li> <a class="dropdown-item" href="help.html">FAQs</a></li>
-						<li> <a class="dropdown-item" href="help.html">Contact Event Organizers</a></li>
+						<li> <a class="dropdown-item" href="contact_organizer.html">Contact Event Organizers</a></li>
 					</ul>
 				</li>
 
@@ -81,9 +81,9 @@
 						About Us <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm">
-						<li> <a class="dropdown-item" href="#">Who We Are</a></li>
-						<li> <a class="dropdown-item" href="#">Contact Us</a></li>
-						<li> <a class="dropdown-item" href="#">Privacy and Terms</a></li>
+						<li> <a class="dropdown-item" href="about_us.html">Who We Are</a></li>
+						<li> <a class="dropdown-item" href="contact_us.html">Contact Us</a></li>
+						<li> <a class="dropdown-item" href="privacy_terms.html">Privacy and Terms</a></li>
 					</ul>
 				</li>
 
@@ -102,93 +102,179 @@
 
     <!-- Main content -->
 	<main class="container py-5 flex-grow-1">
-		<div class="text-center">
-			<h1 class="display-2 fw-bold">Help Center</h1>
-			<p class="fs-5">How can we help?</p>
-			<input type="text" class="form-control mx-auto mb-4 w-25" placeholder="Search help articles...">
+		<!-- Hero Section -->
+		<div class="text-center mb-5">
+			<h1 class="display-4 fw-bold">Contact Us</h1>
+			<p class="fs-5 text-muted">We're here to help! Get in touch with our team</p>
 		</div>
 
-		<div class="container w-75 mb-4">
-			<h4 class="mb-3">Featured Articles</h4>
-			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-3">
-				<div class="col">
-					<a class="btn btn-outline-primary w-100 h-100" data-bs-toggle="modal" data-bs-target="#infoModal" data-help-key="find-tickets">
-						Find your tickets
-					</a>
+		<div class="row">
+			<!-- Contact Information -->
+			<div class="col-lg-4 mb-4">
+				<div class="card h-100 shadow-sm">
+					<div class="card-body">
+						<h4 class="card-title mb-4">Get in Touch</h4>
+
+						<div class="mb-4">
+							<div class="d-flex align-items-center mb-3">
+								<i class="fa-solid fa-envelope fa-lg text-primary me-3"></i>
+								<div>
+									<h6 class="mb-1">Email</h6>
+									<p class="mb-0 text-muted">support@uevents.com</p>
+								</div>
+							</div>
+
+							<div class="d-flex align-items-center mb-3">
+								<i class="fa-solid fa-phone fa-lg text-primary me-3"></i>
+								<div>
+									<h6 class="mb-1">Phone</h6>
+									<p class="mb-0 text-muted">+1 (555) 123-4567</p>
+								</div>
+							</div>
+
+							<div class="d-flex align-items-center mb-3">
+								<i class="fa-solid fa-clock fa-lg text-primary me-3"></i>
+								<div>
+									<h6 class="mb-1">Business Hours</h6>
+									<p class="mb-0 text-muted">Mon-Fri: 9AM-6PM PST</p>
+								</div>
+							</div>
+
+							<div class="d-flex align-items-center">
+								<i class="fa-solid fa-map-marker-alt fa-lg text-primary me-3"></i>
+								<div>
+									<h6 class="mb-1">Address</h6>
+									<p class="mb-0 text-muted">123 Event Street<br>San Francisco, CA 94102</p>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<h6 class="mb-3">Follow Us</h6>
+							<div class="d-flex gap-3">
+								<a href="#" class="text-primary fs-4"><i class="fa-brands fa-twitter"></i></a>
+								<a href="#" class="text-primary fs-4"><i class="fa-brands fa-facebook"></i></a>
+								<a href="#" class="text-primary fs-4"><i class="fa-brands fa-instagram"></i></a>
+								<a href="#" class="text-primary fs-4"><i class="fa-brands fa-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="col">
-					<a class="btn btn-outline-primary w-100 h-100" data-bs-toggle="modal" data-bs-target="#infoModal" data-help-key="request-refund">
-						Request a refund
-					</a>
-				</div>
-				<div class="col">
-					<a class="btn btn-outline-primary w-100 h-100" data-bs-toggle="modal" data-bs-target="#infoModal" data-help-key="contact-organizer">
-						Contact the event organizer
-					</a>
-				</div>
-				<div class="col">
-					<a class="btn btn-outline-primary w-100 h-100" data-bs-toggle="modal" data-bs-target="#infoModal" data-help-key="charges-explanation">
-						What is this charge from UEvents?
-					</a>
-				</div>
-				<div class="col">
-					<a class="btn btn-outline-primary w-100 h-100" data-bs-toggle="modal" data-bs-target="#infoModal" data-help-key="transfer-tickets">
-						Transfer tickets to someone else
-					</a>
-				</div>
-				<div class="col">
-					<a class="btn btn-outline-primary w-100 h-100" data-bs-toggle="modal" data-bs-target="#infoModal" data-help-key="edit-order-info">
-						Edit your order information
-					</a>
+			</div>
+
+			<!-- Contact Form -->
+			<div class="col-lg-8">
+				<div class="card shadow-sm">
+					<div class="card-body p-4">
+						<h4 class="card-title mb-4">Send us a Message</h4>
+
+						<form id="contactForm">
+							<div class="row mb-3">
+								<div class="col-md-6">
+									<div class="form-floating">
+										<input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+										<label for="firstName">First Name</label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-floating">
+										<input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+										<label for="lastName">Last Name</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-floating mb-3">
+								<input type="email" class="form-control" id="email" placeholder="Email Address" required>
+								<label for="email">Email Address</label>
+							</div>
+
+							<div class="form-floating mb-3">
+								<input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+								<label for="phone">Phone Number (Optional)</label>
+							</div>
+
+							<div class="mb-3">
+								<label for="subject" class="form-label">Subject</label>
+								<select class="form-select" id="subject" required>
+									<option value="" disabled selected>Select a subject</option>
+									<option value="general">General Inquiry</option>
+									<option value="technical">Technical Support</option>
+									<option value="billing">Billing Question</option>
+									<option value="partnership">Partnership Opportunity</option>
+									<option value="feedback">Feedback</option>
+									<option value="other">Other</option>
+								</select>
+							</div>
+
+							<div class="form-floating mb-4">
+								<textarea class="form-control" id="message" placeholder="Your Message" style="height: 150px" required></textarea>
+								<label for="message">Your Message</label>
+							</div>
+
+							<div class="form-check mb-4">
+								<input class="form-check-input" type="checkbox" id="newsletter">
+								<label class="form-check-label" for="newsletter">
+									Subscribe to our newsletter for updates and event recommendations
+								</label>
+							</div>
+
+							<div class="d-grid">
+								<button type="submit" class="btn btn-primary btn-lg">
+									<i class="fa-solid fa-paper-plane me-2"></i>Send Message
+								</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="container w-75">
-			<h4 class="mb-3">Browse by Topic</h4>
-			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-3">
-				<div class="col">
-					<a class="btn btn-outline-primary w-100 h-100" data-bs-toggle="modal" data-bs-target="#infoModal" data-help-key="buy-and-register">
-						Buy and register
-					</a>
+		<!-- FAQ Section -->
+		<div class="row mt-5">
+			<div class="col-12">
+				<div class="text-center mb-4">
+					<h3>Frequently Asked Questions</h3>
+					<p class="text-muted">Quick answers to common questions</p>
 				</div>
-				<div class="col">
-					<a class="btn btn-outline-primary w-100 h-100" data-bs-toggle="modal" data-bs-target="#infoModal" data-help-key="your-tickets">
-						Your tickets
-					</a>
-				</div>
-				<div class="col">
-					<a class="btn btn-outline-primary w-100 h-100" data-bs-toggle="modal" data-bs-target="#infoModal" data-help-key="your-account">
-						Your account
-					</a>
-				</div>
-				<div class="col w-100">
-					<a class="btn btn-outline-primary w-100 h-100" data-bs-toggle="modal" data-bs-target="#infoModal" data-help-key="terms-and-policies">
-						Terms and policies
-					</a>
+
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<div class="card h-100">
+							<div class="card-body">
+								<h6 class="card-title">How do I create an event?</h6>
+								<p class="card-text small text-muted">Simply sign up for an account and click "Create Event" to get started with our easy-to-use event creation tool.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 mb-3">
+						<div class="card h-100">
+							<div class="card-body">
+								<h6 class="card-title">What are your fees?</h6>
+								<p class="card-text small text-muted">We charge a small service fee per ticket sold. Check our pricing page for detailed information.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 mb-3">
+						<div class="card h-100">
+							<div class="card-body">
+								<h6 class="card-title">How do I get a refund?</h6>
+								<p class="card-text small text-muted">Refund policies are set by event organizers. Contact the organizer directly or check the event page for details.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 mb-3">
+						<div class="card h-100">
+							<div class="card-body">
+								<h6 class="card-title">Need more help?</h6>
+								<p class="card-text small text-muted">Visit our comprehensive <a href="help.html" class="text-decoration-none">Help Center</a> for detailed guides and tutorials.</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</main>
-
-	<!-- Info modal -->
-	<div class="modal fade" id="infoModal" tabindex="-1">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<!-- Modal title will be updated dynamically -->
-					<h5 class="modal-title" id="infoModalLabel">Help Center</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-				</div>
-				<div class="modal-body">
-					<!-- Modal content will be updated dynamically -->
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- Footer -->
 	<footer class="bg-dark text-white text-center py-4">
@@ -277,6 +363,5 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="../js/login.js"></script>
-	<script src="../js/help.js" type="module"></script>
 </body>
 </html>

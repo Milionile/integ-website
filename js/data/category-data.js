@@ -1,6 +1,6 @@
 export const categories = {
     music: {
-        name: "Music Events",
+        name: "Music",
         description: "Live concerts and musical performances"
     },
     performing_arts: {

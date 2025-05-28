@@ -21,9 +21,13 @@ function updateMenuVisibility() {
     const isAttendee = params.get('attendee') === 'true';
     const isPlanner = params.get('planner') === 'true';
 
-    if (isAttendee) document.getElementById('tickets')?.classList.remove('d-none');
+    if (isAttendee) {
+        document.getElementById('tickets')?.classList.remove('d-none');
+    }
+    
     if (isPlanner) {
         document.getElementById('our-services')?.classList.add('d-none');
+        document.getElementById('create-events')?.classList.remove('d-none');
         document.getElementById('manage-events')?.classList.remove('d-none');
     }
 }
@@ -68,6 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('click', e => {
     if (e.target.matches('#accountDropdown .dropdown-item[href="#logout"]')) {
         e.preventDefault();
+        // Reset menu visibility
+        document.getElementById('tickets')?.classList.add('d-none');
+        document.getElementById('create-events')?.classList.add('d-none');
+        document.getElementById('manage-events')?.classList.add('d-none');
+        document.getElementById('our-services')?.classList.remove('d-none');
+        // Update dropdown content
         updateDropdownContent('../templates/login/logged_out_dropdown.html', 'Failed to log out');
     }
 });

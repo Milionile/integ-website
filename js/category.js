@@ -39,15 +39,24 @@ function populateEventCard(card, event) {
 async function renderCategory() {
     const urlParams = new URLSearchParams(window.location.search);
     const categoryId = urlParams.get('category') || 'featured';
-    
+
     const category = categories[categoryId];
     if (!category) {
         console.error(`Category '${categoryId}' not found`);
         return;
     }
 
+    // Update both document.title and the HTML <title> element for better SEO and consistency
+    const newTitle = `${category.name} Events | UEvents`;
+    document.title = newTitle;
+
+    // Also update the HTML title element in the head
+    const titleElement = document.querySelector('head title');
+    if (titleElement) {
+        titleElement.textContent = newTitle;
+    }
+
     const elements = {
-        title: document.title = `UEvents - ${category.name}`,
         breadcrumb: document.querySelector('.breadcrumb-item.active'),
         header: document.querySelector('h1.display-4'),
         description: document.querySelector('p.fs-5'),
@@ -59,9 +68,16 @@ async function renderCategory() {
         return;
     }
 
+    // Update page content elements
     Object.entries(elements).forEach(([key, element]) => {
-        if (element && key !== 'title' && key !== 'container') {
-            element.textContent = key === 'description' ? category.description : category.name;
+        if (element && key !== 'container') {
+            if (key === 'description') {
+                element.textContent = category.description;
+            } else if (key === 'breadcrumb') {
+                element.textContent = category.name;
+            } else if (key === 'header') {
+                element.textContent = category.name;
+            }
         }
     });
 
@@ -70,7 +86,7 @@ async function renderCategory() {
 
     const template = document.createElement('template');
     template.innerHTML = templateText;
-    
+
     const categoryEvents = events.filter(event => event.category === categoryId);
     categoryEvents.forEach(event => {
         const card = template.content.cloneNode(true).firstElementChild;
