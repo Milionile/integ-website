@@ -51,7 +51,7 @@
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse flex-grow-0 align-self-start justify-content-sm-end" id="navbarNav">
 			<ul class="navbar-nav column-gap-1">
-				<li class="nav-item dropdown">
+				<li id="our-services" class="nav-item dropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						Our Services <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
@@ -60,7 +60,9 @@
 						<li><a class="dropdown-item" href="#">Create Events</a></li>
 					</ul>
 				</li>
-
+				<li id="manage-events" class="nav-item d-none">
+					<a class="nav-link" href="create.html">Create Event</a>
+				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						Tickets <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
@@ -69,7 +71,7 @@
 						<li> <a class="dropdown-item" href="#">Purchase Tickets</a></li>
 					</ul>
 				</li>
-
+				
 				<li class="nav-item dropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						Help Center <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
@@ -79,7 +81,7 @@
 						<li> <a class="dropdown-item" href="help.html">Contact Event Organizers</a></li>
 					</ul>
 				</li>
-
+				
 				<li class="nav-item dropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						About Us <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
@@ -90,16 +92,14 @@
 						<li> <a class="dropdown-item" href="#">Privacy and Terms</a></li>
 					</ul>
 				</li>
-
+				
 				<li class="nav-item dropdown position-relative" id="accountDropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						My Account <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm" style="right: 0; left: auto;">
-						<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign
-								Up</a></li>
-						<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log
-								In</a></li>
+						<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a></li>
+						<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -132,7 +132,7 @@
 						</div>
 					</div>
 				</div>
-
+				
 				<!-- Checkout -->
 				<div class="col-lg-4">
 					<div class="card shadow-sm sticky-top">

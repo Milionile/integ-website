@@ -1,4 +1,4 @@
-import { events } from './event-data.js';
+import { events } from './data/event-data.js';
 
 function getEventIdFromUrl() {
 	const params = new URLSearchParams(window.location.search);

@@ -22,7 +22,10 @@ function updateMenuVisibility() {
     const isPlanner = params.get('planner') === 'true';
 
     if (isAttendee) document.getElementById('tickets')?.classList.remove('d-none');
-    if (isPlanner) document.getElementById('manage-events')?.classList.remove('d-none');
+    if (isPlanner) {
+        document.getElementById('our-services')?.classList.add('d-none');
+        document.getElementById('manage-events')?.classList.remove('d-none');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

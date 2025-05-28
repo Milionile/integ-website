@@ -1,5 +1,5 @@
-import { events } from './event-data.js';
-import { categories } from './category-data.js';
+import { events } from './data/event-data.js';
+import { categories } from './data/category-data.js';
 
 async function loadTemplate() {
     try {
