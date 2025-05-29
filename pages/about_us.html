@@ -8,6 +8,20 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 	<link href="../css/styles.css" rel="stylesheet">
+	<style>
+        /* Custom anchor color and underline color */
+        #team .card {
+			a, a:visited {
+				color: #c31835 !important;
+				text-decoration-color: #c31835 !important;
+        	}
+
+			a:hover, a:focus {
+				color: #9f1329 !important;
+				text-decoration-color: #9f1329 !important;
+			}
+		}
+    </style>
 </head>
 <body class="bg-light min-vh-100 d-flex flex-column">
 	<!-- Navbar -->
@@ -161,55 +175,61 @@
 		</div>
 
 		<!-- Team Section -->
-		<div class="row mb-5">
+		<div id="team" class="row mb-5">
 			<div class="col-12">
 				<h2 class="text-center mb-4">Meet Our Team</h2>
 				<div class="row g-4">
-					<div class="col-lg-3 col-md-6">
-						<div class="card h-100 py-2 shadow-sm">
+					<div class="col-lg-4 col-md-6">
+						<div class="card h-100 pb-2 shadow-sm">
+							<img class="card-img-top" src="../images/team/me.jpg" alt="Ernesto Mendoza">
 							<div class="card-body text-center">
-								<div class="bg-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-									<i class="fa-solid fa-user fa-2x text-white"></i>
-								</div>
-								<h5 class="card-title">Sarah Chen</h5>
-								<p class="text-muted">CEO & Founder</p>
-								<p class="card-text small">Passionate about connecting communities through technology and events.</p>
+								<h5 class="card-title"><a href="" target="_blank">Ernesto Mendoza</a></h5>
+								<p class="text-muted">Project Manager / Web Developer</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="card h-100 py-2 shadow-sm">
+					<div class="col-lg-4 col-md-6">
+						<div class="card h-100 pb-2 shadow-sm">
+							<img class="card-img-top" src="../images/team/mik.jpg" alt="Michael Ascue">
 							<div class="card-body text-center">
-								<div class="bg-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-									<i class="fa-solid fa-user fa-2x text-white"></i>
-								</div>
-								<h5 class="card-title">Marcus Rodriguez</h5>
-								<p class="text-muted">CTO</p>
-								<p class="card-text small">Leading our technical innovation with over 10 years in software development.</p>
+								<h5 class="card-title"><a target="_blank" href="https://csbd-ascue-portfolio25.on.drv.tw/PORTFOLIO/">Michael Ascue</a></h5>
+								<p class="text-muted">UI/UX Designer / Graphic Designer</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="card h-100 py-2 shadow-sm">
+					<div class="col-lg-4 col-md-6">
+						<div class="card h-100 pb-2 shadow-sm">
+							<img class="card-img-top" src="../images/team/alex.jpg" alt="Alex Daniel">
 							<div class="card-body text-center">
-								<div class="bg-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-									<i class="fa-solid fa-user fa-2x text-white"></i>
-								</div>
-								<h5 class="card-title">Emily Johnson</h5>
-								<p class="text-muted">Head of Design</p>
-								<p class="card-text small">Creating beautiful and intuitive user experiences for our platform.</p>
+								<h5 class="card-title"><a target="_blank" href="https://danieljr-portfolio.netlify.app">Alex Daniel</a></h5>
+								<p class="text-muted">Web Developer / Web Content</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="card h-100 py-2 shadow-sm">
+					<div class="col-lg-4 col-md-6">
+						<div class="card h-100 pb-2 shadow-sm">
+							<img class="card-img-top" src="../images/team/ian.jpg" alt="Christian Tiburcio">
 							<div class="card-body text-center">
-								<div class="bg-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-									<i class="fa-solid fa-user fa-2x text-white"></i>
-								</div>
-								<h5 class="card-title">David Kim</h5>
-								<p class="text-muted">Customer Success</p>
-								<p class="card-text small">Ensuring every user has an amazing experience with our platform.</p>
+								<h5 class="card-title"><a target="_blank" href="">Christian Tiburcio</a></h5>
+								<p class="text-muted">Web Developer</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="card h-100 pb-2 shadow-sm">
+							<img class="card-img-top" src="../images/team/roxas.jpg" alt="Jahn Vincent Roxas">
+							<div class="card-body text-center">
+								<h5 class="card-title"><a target="_blank" href="">Jahn Vincent Roxas</a></h5>
+								<p class="text-muted">Web Quality Assurance Specialist</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="card h-100 pb-2 shadow-sm">
+							<img class="card-img-top" src="../images/team/lester.jpg" alt="Lester Bartolome">
+							<div class="card-body text-center">
+								<h5 class="card-title"><a target="_blank" href="">Lester Bartolome</a></h5>
+								<p class="text-muted">Requirement Analyst / Graphic Designer</p>
 							</div>
 						</div>
 					</div>
@@ -245,6 +265,21 @@
 				</div>
 			</div>
 		</div>
+		
+		<!-- Reviews Link Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card bg-white text-white shadow-sm">
+                    <div class="card-body text-center py-5">
+                        <h2>See What Our Users Are Saying</h2>
+                        <p class="fs-5 mb-4">Read real reviews and testimonials from our community.</p>
+                        <a href="review.html" class="btn btn-light btn-lg">
+                            <i class="fa-solid fa-star me-2 text-warning"></i>Read Reviews
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 		<!-- Contact CTA -->
 		<div class="text-center">
