@@ -107,7 +107,7 @@
 			<!-- First row: Event Title -->
 			<div class="row mb-3">
 				<div class="col-md-12">
-					<label for="eventTitle" class="form-label">Title</label>
+					<label for="eventTitle" class="form-label">Title<span class="text-danger">*</span></label>
 					<input type="text" class="form-control" id="eventTitle" placeholder="Enter event title" required>
 				</div>
 			</div>
@@ -115,11 +115,11 @@
 			<!-- Second row: Price, Category, and Location -->
 			<div class="row mb-3 gy-2">
 				<div class="col-md-3">
-					<label for="eventPrice" class="form-label">Price</label>
+					<label for="eventPrice" class="form-label">Price<span class="text-danger">*</span></label>
 					<input type="number" class="form-control" id="eventPrice" placeholder="Enter price" min="0" required>
 				</div>
 				<div class="col-md-3">
-					<label for="eventCategory" class="form-label">Category</label>
+					<label for="eventCategory" class="form-label">Category<span class="text-danger">*</span></label>
 					<select id="eventCategory" class="form-select" required>
 						<option value="" disabled selected>Select category</option>
 						<option value="music">Music</option>
@@ -133,18 +133,18 @@
 					</select>
 				</div>
 				<div class="col-md-6">
-					<label for="eventLocation" class="form-label">Location</label>
+					<label for="eventLocation" class="form-label">Location<span class="text-danger">*</span></label>
 					<input type="text" class="form-control" id="eventLocation" placeholder="Enter event location" required>
 				</div>
 			</div>
 			<!-- Description row -->
 			<div class="mb-3">
-				<label for="eventDescription" class="form-label">Description</label>
+				<label for="eventDescription" class="form-label">Description<span class="text-danger">*</span></label>
 				<textarea class="form-control" id="eventDescription" rows="3" placeholder="Enter event description" required></textarea>
 			</div>
 			<!-- Event Days: Multi-day support with responsive columns -->
 			<div id="eventDays">
-				<label class="form-label">Event Date & Time</label>
+				<label class="form-label">Event Date & Time<span class="text-danger">*</span></label>
 				<div class="row gy-2 gx-3 align-items-end mb-2 day-row">
 					<div class="col-12 col-sm-4 col-md-6">
 						<input type="date" class="form-control" id="eventDate0" required>
@@ -207,19 +207,19 @@
 						<p>Please fill in this form to create an account.</p>
 						<div class="form-floating mb-3">
 							<input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
-							<label for="fullName">Full Name</label>
+							<label for="fullName">Full Name<span class="text-danger">*</span></label>
 						</div>
 						<div class="form-floating mb-3">
 							<input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-							<label for="email">Email</label>
+							<label for="email">Email<span class="text-danger">*</span></label>
 						</div>
 						<div class="form-floating mb-3">
 							<input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-							<label for="password">Password</label>
+							<label for="password">Password<span class="text-danger">*</span></label>
 						</div>
 						<div class="form-floating mb-3">
 							<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
-							<label for="confirmPassword">Confirm Password</label>
+							<label for="confirmPassword">Confirm Password<span class="text-danger">*</span></label>
 						</div>
 						<label class="form-label mb-2">I am interested in:</label>
 						<div class="form-check mb-2">

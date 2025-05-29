@@ -114,7 +114,7 @@
 						<form id="contactOrganizerForm">
 							<!-- Event Selection -->
 							<div class="mb-4">
-								<label for="eventSelect" class="form-label">Select Event</label>
+								<label for="eventSelect" class="form-label">Select Event<span class="text-danger">*</span></label>
 								<select class="form-select" id="eventSelect" required>
 									<option value="" disabled selected>Choose the event you're asking about</option>
 									<option value="eras-tour">Taylor Swift: The Eras Tour</option>
@@ -130,20 +130,20 @@
 								<div class="col-md-6">
 									<div class="form-floating">
 										<input type="text" class="form-control" id="firstName" placeholder="First Name" required>
-										<label for="firstName">First Name</label>
+										<label for="firstName">First Name<span class="text-danger">*</span></label>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-floating">
 										<input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
-										<label for="lastName">Last Name</label>
+										<label for="lastName">Last Name<span class="text-danger">*</span></label>
 									</div>
 								</div>
 							</div>
 
 							<div class="form-floating mb-3">
 								<input type="email" class="form-control" id="email" placeholder="Email Address" required>
-								<label for="email">Email Address</label>
+								<label for="email">Email Address<span class="text-danger">*</span></label>
 							</div>
 
 							<div class="form-floating mb-3">
@@ -153,7 +153,7 @@
 
 							<!-- Inquiry Type -->
 							<div class="mb-3">
-								<label for="inquiryType" class="form-label">Type of Inquiry</label>
+								<label for="inquiryType" class="form-label">Type of Inquiry<span class="text-danger">*</span></label>
 								<select class="form-select" id="inquiryType" required>
 									<option value="" disabled selected>Select inquiry type</option>
 									<option value="general">General Question</option>
@@ -169,7 +169,7 @@
 							<!-- Message -->
 							<div class="form-floating mb-4">
 								<textarea class="form-control" id="message" placeholder="Your Message" style="height: 150px" required></textarea>
-								<label for="message">Your Message</label>
+								<label for="message">Your Message<span class="text-danger">*</span></label>
 							</div>
 
 							<!-- Priority Level -->
@@ -245,19 +245,19 @@
 						<p>Please fill in this form to create an account.</p>
 						<div class="form-floating mb-3">
 							<input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
-							<label for="fullName">Full Name</label>
+							<label for="fullName">Full Name<span class="text-danger">*</span></label>
 						</div>
 						<div class="form-floating mb-3">
 							<input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-							<label for="email">Email</label>
+							<label for="email">Email<span class="text-danger">*</span></label>
 						</div>
 						<div class="form-floating mb-3">
 							<input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-							<label for="password">Password</label>
+							<label for="password">Password<span class="text-danger">*</span></label>
 						</div>
 						<div class="form-floating mb-3">
 							<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
-							<label for="confirmPassword">Confirm Password</label>
+							<label for="confirmPassword">Confirm Password<span class="text-danger">*</span></label>
 						</div>
 						<label class="form-label mb-2">I am interested in:</label>
 						<div class="form-check mb-2">
