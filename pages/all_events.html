@@ -3,13 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Why Buy From Us | UEvents</title>
+	<title>All Events | UEvents</title>
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 	<link href="../css/styles.css" rel="stylesheet">
-	<link href="../css/why_create.css" rel="stylesheet">
 </head>
 <body class="bg-light min-vh-100 d-flex flex-column">
 	<!-- Navbar -->
@@ -27,10 +25,10 @@
 		</div>
 
 		<!-- Search bar -->
-		<form class="d-flex w-100 w-sm-auto flex-fill justify-content-sm-center" action="all_events.html" method="get">
+		<form class="d-flex w-100 w-sm-auto flex-fill justify-content-sm-center" id="headerSearchForm">
 			<div class="input-group w-100 w-sm-75">
-				<input type="text" class="form-control border-end-0 rounded-start-3 rounded-end-0 shadow-none" placeholder="Search events...">
-				<input type="text" class="form-control d-none d-sm-block border-start-0 rounded-start-0 shadow-none" placeholder="Search location...">
+				<input type="text" class="form-control border-end-0 rounded-start-3 rounded-end-0 shadow-none" placeholder="Search events..." id="headerSearchInput">
+				<input type="text" class="form-control d-none d-sm-block border-start-0 rounded-start-0 shadow-none" placeholder="Search location..." id="headerLocationInput">
 				<button type="submit" class="btn btn-primary rounded-end-3">
 					<i class="fa-solid fa-search fa-fw"></i>
 				</button>
@@ -102,68 +100,128 @@
 		</div>
 	</nav>
 
-	<!-- Hero Section -->
-	<div class="text-center my-5">
-		<h1 class="fw-bold mb-3">WHY TICKET BUYERS CHOOSE US</h1>
-		<p class="lead mb-4">A smarter, faster, and safer way to discover and attend your next amazing event.</p>
-		<a href="all_events.html" class="btn btn-primary btn-lg me-2">Find Events</a>
-		<a href="#" class="btn btn-outline-secondary btn-lg">How It Works</a>
-	</div>
-	<div class="container mb-5">
-		<img id="hero-img" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=900&q=80" alt="Event Audience" class="rounded-4 w-100 shadow-sm object-fit-cover">
-	</div>
-
     <!-- Main content -->
-	<main class="container py-5 flex-grow-1">
-        <!-- Features Section -->
-        <div class="row g-4 mb-5">
-            <div class="col-md-4">
-                <div class="section-bg bg-white rounded-4 p-4 shadow-sm text-center h-100">
-                    <div class="icon-blue fs-3 mb-2"><i class="bi bi-ticket-detailed"></i></div>
-                    <h4 class="fw-semibold">Instant & Secure Tickets</h4>
-                    <p>Receive tickets instantly and enjoy secure payment methods for total peace of mind.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="section-bg bg-white rounded-4 p-4 shadow-sm text-center h-100">
-                    <div class="icon-blue fs-3 mb-2"><i class="bi bi-shield-check"></i></div>
-                    <h4 class="fw-semibold">Buyer Protection</h4>
-                    <p>Your purchase is protected—refunds are there when events are cancelled or changed.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="section-bg bg-white rounded-4 p-4 shadow-sm text-center h-100">
-                    <div class="icon-blue fs-3 mb-2"><i class="bi bi-lightning"></i></div>
-                    <h4 class="fw-semibold">Hassle-Free Entry</h4>
-                    <p>Use mobile QR codes or print-at-home for quick, no-hassle event entry, every time.</p>
-                </div>
-            </div>
-        </div>
+	<main class="container-fluid py-4 flex-grow-1">
+		<div class="row">
+			<!-- Sidebar -->
+			<div class="col-lg-3 col-md-4 mb-4">
+				<div class="card shadow-sm sticky-top" style="top: 4.4rem;">
+					<div class="card-header">
+						<h5 class="mb-0"><i class="fa-solid fa-filter me-2"></i>Filters</h5>
+					</div>
+					<div class="card-body">
+						<!-- Search -->
+						<div class="mb-4">
+							<label for="searchInput" class="form-label fw-bold">Search Events</label>
+							<input type="text" class="form-control" id="searchInput" placeholder="Search by title or organizer...">
+						</div>
 
-        <!-- Support & Discover Section -->
-        <div class="row g-4 align-items-center mb-5">
-            <div class="col-md-6">
-                <div class="section-bg bg-white rounded-4 p-4 shadow-sm">
-                    <h3 class="fw-bold mb-3">Dedicated Support & Event Discovery</h3>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><strong>Top Support:</strong> Rapid assistance when you need it, for any ticket issue.</li>
-                        <li class="mb-2"><strong>Discover More:</strong> Access the best concerts, festivals, and local events easily.</li>
-                        <li class="mb-2"><strong>Mobile Ready:</strong> Manage all your tickets and invites with our simple mobile platform.</li>
-                    </ul>
-                    <a href="all_events.html" class="btn btn-outline-primary">See All Events</a>
-                </div>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="../images/happyaudiences.jpg" alt="Happy Audience" class="img-fluid rounded-4 shadow-sm">
-            </div>
-        </div>
+						<!-- Category Filter -->
+						<div class="mb-4">
+							<label for="categoryFilter" class="form-label fw-bold">Category</label>
+							<select class="form-select" id="categoryFilter">
+								<option value="">All Categories</option>
+								<option value="music">Music</option>
+								<option value="nightlife">Nightlife</option>
+								<option value="performing_arts">Performing Arts</option>
+								<option value="holidays">Holidays</option>
+								<option value="dating">Dating</option>
+								<option value="hobbies">Hobbies</option>
+								<option value="business">Business</option>
+								<option value="food_and_drink">Food & Drink</option>
+							</select>
+						</div>
 
-        <!-- Call to Action -->
-        <div class="text-center py-5">
-            <h2 class="fw-bold mb-3">Start Your Next Experience With Us</h2>
-            <p class="lead mb-4">Secure your spot at amazing events across your city and beyond—buy with confidence now.</p>
-            <a href="all_events.html" class="btn btn-success btn-lg">Browse Events</a>
-        </div>
+						<!-- Price Filter -->
+						<div class="mb-4">
+							<label class="form-label fw-bold">Price Range</label>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="priceFilter" id="priceAll" value="" checked>
+								<label class="form-check-label" for="priceAll">All Prices</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="priceFilter" id="priceFree" value="free">
+								<label class="form-check-label" for="priceFree">Free Events</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="priceFilter" id="priceUnder1000" value="under1000">
+								<label class="form-check-label" for="priceUnder1000">Under ₱1,000</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="priceFilter" id="price1000to5000" value="1000to5000">
+								<label class="form-check-label" for="price1000to5000">₱1,000 - ₱5,000</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="priceFilter" id="priceOver5000" value="over5000">
+								<label class="form-check-label" for="priceOver5000">Over ₱5,000</label>
+							</div>
+						</div>
+
+						<!-- Date Filter -->
+						<div class="mb-4">
+							<label class="form-label fw-bold">Date</label>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="dateFilter" id="dateAll" value="" checked>
+								<label class="form-check-label" for="dateAll">All Dates</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="dateFilter" id="dateToday" value="today">
+								<label class="form-check-label" for="dateToday">Today</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="dateFilter" id="dateThisWeek" value="thisweek">
+								<label class="form-check-label" for="dateThisWeek">This Week</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="dateFilter" id="dateThisMonth" value="thismonth">
+								<label class="form-check-label" for="dateThisMonth">This Month</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="dateFilter" id="dateNextMonth" value="nextmonth">
+								<label class="form-check-label" for="dateNextMonth">Next Month</label>
+							</div>
+						</div>
+
+						<!-- Clear Filters Button -->
+						<button type="button" class="btn btn-outline-secondary w-100" id="clearFilters">
+							<i class="fa-solid fa-times me-2"></i>Clear All Filters
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Events Grid -->
+			<div class="col-lg-9 col-md-8">
+				<!-- Header -->
+				<div class="d-flex justify-content-between align-items-center mb-4">
+					<div>
+						<h1 class="h2 mb-1">All Events</h1>
+						<p class="text-muted mb-0" id="eventCount">Loading events...</p>
+					</div>
+					<div class="d-flex gap-2">
+						<!-- Sort Dropdown -->
+						<select class="form-select" id="sortFilter" style="width: auto;">
+							<option value="date">Sort by Date</option>
+							<option value="price-low">Price: Low to High</option>
+							<option value="price-high">Price: High to Low</option>
+							<option value="title">Title A-Z</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- Events Container -->
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="eventsContainer">
+					<!-- Events will be loaded here by JavaScript -->
+				</div>
+
+				<!-- No Results Message -->
+				<div class="text-center py-5 d-none" id="noResults">
+					<i class="fa-solid fa-search fa-3x text-muted mb-3"></i>
+					<h3 class="text-muted">No events found</h3>
+					<p class="text-muted">Try adjusting your filters or search terms.</p>
+				</div>
+			</div>
+		</div>
 	</main>
 
 	<!-- Footer -->
@@ -253,5 +311,6 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="../js/login.js"></script>
+	<script type="module" src="../js/all_events.js"></script>
 </body>
 </html>

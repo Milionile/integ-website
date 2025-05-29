@@ -23,9 +23,9 @@
 				</button>
 			</div>
 		</div>
-		
+
 		<!-- Search bar -->
-		<form class="d-flex w-100 w-sm-auto flex-fill justify-content-sm-center">
+		<form class="d-flex w-100 w-sm-auto flex-fill justify-content-sm-center" action="all_events.html" method="get">
 			<div class="input-group w-100 w-sm-75">
 				<input type="text" class="form-control border-end-0 rounded-start-3 rounded-end-0 shadow-none" placeholder="Search events...">
 				<input type="text" class="form-control d-none d-sm-block border-start-0 rounded-start-0 shadow-none" placeholder="Search location...">
@@ -45,18 +45,16 @@
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse flex-grow-0 align-self-start justify-content-sm-end" id="navbarNav">
 			<ul class="navbar-nav column-gap-1">
-				<!-- Modified Our Services dropdown with an id -->
 				<li id="our-services" class="nav-item dropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						Our Services <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm">
-						<li><a class="dropdown-item" href="#">Events</a></li>
-						<li><a class="dropdown-item" href="#">Create Events</a></li>
+						<li><a class="dropdown-item" href="all_events.html">Events</a></li>
+						<li><a class="dropdown-item" href="why_create.html">Create Events</a></li>
 					</ul>
 				</li>
-				<!-- New nav-item for create.html, initially hidden -->
-				<li id="manage-events" class="nav-item d-none">
+				<li id="create-events" class="nav-item d-none">
 					<a class="nav-link" href="create.html">Create Event</a>
 				</li>
 				<li class="nav-item dropdown">
@@ -64,55 +62,125 @@
 						Tickets <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm">
-						<li> <a class="dropdown-item" href="#">Purchase Tickets</a></li>
+						<li> <a class="dropdown-item" href="ticket.html">Purchase Tickets</a></li>
 					</ul>
 				</li>
-				
+
 				<li class="nav-item dropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						Help Center <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm">
 						<li> <a class="dropdown-item" href="help.html">FAQs</a></li>
-						<li> <a class="dropdown-item" href="help.html">Contact Event Organizers</a></li>
+						<li> <a class="dropdown-item" href="contact_organizer.html">Contact Event Organizers</a></li>
 					</ul>
 				</li>
-				
+
 				<li class="nav-item dropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						About Us <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm">
-						<li> <a class="dropdown-item" href="#">Who We Are</a></li>
-						<li> <a class="dropdown-item" href="#">Contact Us</a></li>
-						<li> <a class="dropdown-item" href="#">Privacy and Terms</a></li>
+						<li> <a class="dropdown-item" href="about_us.html">Who We Are</a></li>
+						<li> <a class="dropdown-item" href="contact_us.html">Contact Us</a></li>
+						<li> <a class="dropdown-item" href="privacy_terms.html">Privacy and Terms</a></li>
 					</ul>
 				</li>
-				
+
 				<li class="nav-item dropdown position-relative" id="accountDropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						My Account <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm" style="right: 0; left: auto;">
-						<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a></li>
-						<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a></li>
+						<li> <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a></li>
+						<li> <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a></li>
 					</ul>
 				</li>
 			</ul>
 		</div>
 	</nav>
-	
+
     <!-- Main content -->
 	<main class="container py-5 flex-grow-1">
-        
+        <!-- Hero Section -->
+        <div class="text-center mb-5">
+			<h1 class="display-3 fw-bold text-primary">Welcome to UEvents</h1>
+			<p class="fs-4 text-muted mb-4">Your Premier Event Marketplace</p>
+			<p class="lead mb-4">Discover amazing events, connect with like-minded people, and create unforgettable experiences.</p>
+			<div class="d-flex gap-3 justify-content-center flex-wrap">
+				<a href="all_events.html" class="btn btn-primary btn-lg">
+					<i class="fa-solid fa-calendar-days me-2"></i>Browse Events
+				</a>
+				<a href="create.html" class="btn btn-outline-primary btn-lg">
+					<i class="fa-solid fa-plus me-2"></i>Create Event
+				</a>
+			</div>
+		</div>
+
+		<!-- Features Section -->
+		<div class="row g-4 mb-5">
+			<div class="col-md-4">
+				<div class="card h-100 shadow-sm border-0">
+					<div class="card-body text-center p-4">
+						<div class="bg-primary bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+							<i class="fa-solid fa-search fa-2x text-primary"></i>
+						</div>
+						<h5 class="card-title">Discover Events</h5>
+						<p class="card-text text-muted">Find events that match your interests from concerts to workshops, festivals to networking events.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card h-100 shadow-sm border-0">
+					<div class="card-body text-center p-4">
+						<div class="bg-success bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+							<i class="fa-solid fa-ticket fa-2x text-success"></i>
+						</div>
+						<h5 class="card-title">Easy Booking</h5>
+						<p class="card-text text-muted">Secure and simple ticket purchasing with instant confirmation and mobile-friendly tickets.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card h-100 shadow-sm border-0">
+					<div class="card-body text-center p-4">
+						<div class="bg-warning bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+							<i class="fa-solid fa-users fa-2x text-warning"></i>
+						</div>
+						<h5 class="card-title">Connect & Share</h5>
+						<p class="card-text text-muted">Join a community of event enthusiasts and share your experiences with others.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call to Action Section -->
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
+				<div class="card bg-primary text-white shadow-lg border-0">
+					<div class="card-body p-5 text-center">
+						<h3 class="card-title mb-3">Ready to Get Started?</h3>
+						<p class="card-text fs-5 mb-4">Join thousands of event-goers and organizers who trust UEvents for their event needs.</p>
+						<div class="d-flex gap-3 justify-content-center flex-wrap">
+							<button class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#signupModal">
+								<i class="fa-solid fa-user-plus me-2"></i>Sign Up Now
+							</button>
+							<a href="help.html" class="btn btn-outline-light btn-lg">
+								<i class="fa-solid fa-question-circle me-2"></i>Learn More
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 
 	<!-- Footer -->
 	<footer class="bg-dark text-white text-center py-4">
 		<p class="mb-1">© 2025 UEvents. All rights reserved.</p>
 		<ul class="list-inline mb-0">
-			<li class="list-inline-item"><a href="#" class="text-decoration-none">Privacy & Terms</a></li>
-			<li class="list-inline-item"><a href="#" class="text-decoration-none">Contact</a></li>
+			<li class="list-inline-item"><a href="privacy_terms.html" class="text-decoration-none">Privacy & Terms</a></li>
+			<li class="list-inline-item"><a href="contact_us.html" class="text-decoration-none">Contact</a></li>
 			<li class="list-inline-item"><a href="help.html" class="text-decoration-none">FAQs</a></li>
 		</ul>
 	</footer>

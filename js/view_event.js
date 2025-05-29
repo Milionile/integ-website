@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			eventDaySelect.appendChild(option);
 		});
 		eventDaySelect.parentElement.classList.remove("d-none");
+		eventDaySelect.required = true; // Make it required when visible
 		eventDaySelect.addEventListener("change", () => {
 			getEl("selectedSeatInput").value = "";
 			getEl("selectedSeat").style.display = "none";
@@ -74,36 +75,42 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	} else {
 		eventDaySelect.parentElement.classList.add("d-none");
+		eventDaySelect.required = false; // Remove required when hidden
 	}
 
 	// Handle seat type selection if available
 	if (event.seatTypes?.length) {
-		[ticketPriceEl, ticketPriceEl.previousElementSibling].forEach(el => 
+		[ticketPriceEl, ticketPriceEl.previousElementSibling].forEach(el =>
 			el?.style && (el.style.display = "none")
 		);
 		const container = seatTypeSelect.closest(".d-none");
 		container?.classList.remove("d-none");
-		
+
 		seatTypeSelect.innerHTML = event.seatTypes
 			.map(st => `<option value="${st.price}">${st.type} - ${formatPrice(st.price)}</option>`)
 			.join("");
-			
+
+		seatTypeSelect.required = true; // Make it required when visible
+		getEl("selectedSeatInput").required = true; // Make seat selection required
+
 		seatTypeSelect.addEventListener("change", () => {
 			updateTotalPrice();
 			refreshSeatPicker();
 		});
 	} else {
-		[seatTypeSelect, getEl("seatPicker")].forEach(el => 
+		[seatTypeSelect, getEl("seatPicker")].forEach(el =>
 			el.parentElement.classList.add("d-none")
 		);
+		seatTypeSelect.required = false; // Remove required when hidden
+		getEl("selectedSeatInput").required = false; // Remove seat selection required
 	}
 
 	// Set up ticket quantity controls
 	["decrease", "increase"].forEach(action => {
 		getEl(`${action}Quantity`).addEventListener("click", () => {
 			const qty = parseInt(quantityInput.value);
-			quantityInput.value = action === "decrease" 
-				? Math.max(1, qty - 1) 
+			quantityInput.value = action === "decrease"
+				? Math.max(1, qty - 1)
 				: qty + 1;
 			updateTotalPrice();
 		});
@@ -174,4 +181,49 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (event.seatTypes && event.seatTypes.length > 0) {
 		refreshSeatPicker();
 	}
+
+	// Handle checkout form submission
+	const ticketForm = getEl("ticketForm");
+	ticketForm.addEventListener("submit", (e) => {
+		e.preventDefault();
+
+		// Collect only user-manipulated data
+		const orderData = {
+			eventId: event.id,
+			quantity: parseInt(quantityInput.value)
+		};
+
+		// Add seat information if applicable
+		if (event.seatTypes && event.seatTypes.length > 0) {
+			const selectedOption = seatTypeSelect.options[seatTypeSelect.selectedIndex];
+			orderData.seatType = selectedOption.textContent.split(' - ')[0];
+
+			const selectedSeatInput = getEl("selectedSeatInput");
+			if (selectedSeatInput.value) {
+				orderData.selectedSeat = selectedSeatInput.value;
+			}
+		}
+
+		// Add event day if applicable (for any event that has days property)
+		if (event.days && event.days.length > 0) {
+			// For multi-day events, use the selected day
+			if (event.days.length > 1) {
+				orderData.eventDay = eventDaySelect.value;
+			} else {
+				// For single-day events with days property, use the only day
+				orderData.eventDay = event.days[0];
+			}
+		}
+
+		// Generate checkout URL with parameters
+		const checkoutParams = new URLSearchParams();
+		Object.keys(orderData).forEach(key => {
+			if (orderData[key] !== undefined && orderData[key] !== null) {
+				checkoutParams.set(key, orderData[key]);
+			}
+		});
+
+		// Redirect to checkout page
+		window.location.href = `ticket.html?${checkoutParams.toString()}`;
+	});
 });

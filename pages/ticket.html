@@ -3,13 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Why Buy From Us | UEvents</title>
+	<title>Tickets | UEvents</title>
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 	<link href="../css/styles.css" rel="stylesheet">
-	<link href="../css/why_create.css" rel="stylesheet">
 </head>
 <body class="bg-light min-vh-100 d-flex flex-column">
 	<!-- Navbar -->
@@ -102,68 +100,126 @@
 		</div>
 	</nav>
 
-	<!-- Hero Section -->
-	<div class="text-center my-5">
-		<h1 class="fw-bold mb-3">WHY TICKET BUYERS CHOOSE US</h1>
-		<p class="lead mb-4">A smarter, faster, and safer way to discover and attend your next amazing event.</p>
-		<a href="all_events.html" class="btn btn-primary btn-lg me-2">Find Events</a>
-		<a href="#" class="btn btn-outline-secondary btn-lg">How It Works</a>
-	</div>
-	<div class="container mb-5">
-		<img id="hero-img" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=900&q=80" alt="Event Audience" class="rounded-4 w-100 shadow-sm object-fit-cover">
-	</div>
-
     <!-- Main content -->
 	<main class="container py-5 flex-grow-1">
-        <!-- Features Section -->
-        <div class="row g-4 mb-5">
-            <div class="col-md-4">
-                <div class="section-bg bg-white rounded-4 p-4 shadow-sm text-center h-100">
-                    <div class="icon-blue fs-3 mb-2"><i class="bi bi-ticket-detailed"></i></div>
-                    <h4 class="fw-semibold">Instant & Secure Tickets</h4>
-                    <p>Receive tickets instantly and enjoy secure payment methods for total peace of mind.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="section-bg bg-white rounded-4 p-4 shadow-sm text-center h-100">
-                    <div class="icon-blue fs-3 mb-2"><i class="bi bi-shield-check"></i></div>
-                    <h4 class="fw-semibold">Buyer Protection</h4>
-                    <p>Your purchase is protected—refunds are there when events are cancelled or changed.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="section-bg bg-white rounded-4 p-4 shadow-sm text-center h-100">
-                    <div class="icon-blue fs-3 mb-2"><i class="bi bi-lightning"></i></div>
-                    <h4 class="fw-semibold">Hassle-Free Entry</h4>
-                    <p>Use mobile QR codes or print-at-home for quick, no-hassle event entry, every time.</p>
-                </div>
-            </div>
-        </div>
+		<!-- Header Section -->
+		<div class="text-center mb-5">
+			<div class="bg-primary bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
+				<i class="fa-solid fa-user-circle fa-4x text-primary"></i>
+			</div>
+			<h1 class="display-5 fw-bold">My Tickets</h1>
+			<p class="fs-5 text-muted">Manage your event tickets and orders</p>
+		</div>
 
-        <!-- Support & Discover Section -->
-        <div class="row g-4 align-items-center mb-5">
-            <div class="col-md-6">
-                <div class="section-bg bg-white rounded-4 p-4 shadow-sm">
-                    <h3 class="fw-bold mb-3">Dedicated Support & Event Discovery</h3>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><strong>Top Support:</strong> Rapid assistance when you need it, for any ticket issue.</li>
-                        <li class="mb-2"><strong>Discover More:</strong> Access the best concerts, festivals, and local events easily.</li>
-                        <li class="mb-2"><strong>Mobile Ready:</strong> Manage all your tickets and invites with our simple mobile platform.</li>
-                    </ul>
-                    <a href="all_events.html" class="btn btn-outline-primary">See All Events</a>
-                </div>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="../images/happyaudiences.jpg" alt="Happy Audience" class="img-fluid rounded-4 shadow-sm">
-            </div>
-        </div>
+		<!-- User Stats -->
+		<div class="row g-4 mb-5">
+			<div class="col-md-4">
+				<div class="card text-center shadow-sm border-0">
+					<div class="card-body p-4">
+						<div class="bg-success bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+							<i class="fa-solid fa-ticket fa-lg text-success"></i>
+						</div>
+						<h3 class="fw-bold text-success" id="order-amount">0</h3>
+						<p class="text-muted mb-0">Total Orders</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card text-center shadow-sm border-0">
+					<div class="card-body p-4">
+						<div class="bg-warning bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+							<i class="fa-solid fa-heart fa-lg text-warning"></i>
+						</div>
+						<h3 class="fw-bold text-warning">0</h3>
+						<p class="text-muted mb-0">Liked Events</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card text-center shadow-sm border-0">
+					<div class="card-body p-4">
+						<div class="bg-info bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+							<i class="fa-solid fa-users fa-lg text-info"></i>
+						</div>
+						<h3 class="fw-bold text-info">0</h3>
+						<p class="text-muted mb-0">Following</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <!-- Call to Action -->
-        <div class="text-center py-5">
-            <h2 class="fw-bold mb-3">Start Your Next Experience With Us</h2>
-            <p class="lead mb-4">Secure your spot at amazing events across your city and beyond—buy with confidence now.</p>
-            <a href="all_events.html" class="btn btn-success btn-lg">Browse Events</a>
-        </div>
+		<!-- Orders Section -->
+		<div class="row">
+			<div class="col-12">
+				<div class="card shadow-sm border-0">
+					<div class="card-header bg-white border-bottom">
+						<div class="d-flex justify-content-between align-items-center">
+							<h4 class="mb-0">My Orders</h4>
+							<div class="btn-group" role="group">
+								<button type="button" class="btn btn-outline-primary active">Upcoming</button>
+								<button type="button" class="btn btn-outline-primary">Past</button>
+							</div>
+						</div>
+					</div>
+					<div class="card-body">
+						<!-- Orders Container -->
+						<div id="boughtEventsContainer" class="d-none row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+							<!-- Orders will be populated here -->
+						</div>
+
+						<!-- Empty State -->
+						<div id="emptyState" class="text-center py-5">
+							<div class="bg-light rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
+								<i class="fa-solid fa-ticket fa-3x text-muted"></i>
+							</div>
+							<h5 class="text-muted mb-3">No upcoming orders</h5>
+							<p class="text-muted mb-4">You haven't purchased any tickets yet. Discover amazing events and get your tickets now!</p>
+							<div class="d-flex gap-3 justify-content-center flex-wrap">
+								<a href="all_events.html" class="btn btn-primary">
+									<i class="fa-solid fa-search me-2"></i>Browse Events
+								</a>
+								<a href="account.html" class="btn btn-outline-secondary">
+									<i class="fa-solid fa-history me-2"></i>View Past Orders
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Quick Actions -->
+		<div class="row mt-5">
+			<div class="col-12">
+				<div class="card bg-light border-0">
+					<div class="card-body p-4">
+						<h5 class="card-title mb-3">Quick Actions</h5>
+						<div class="row g-3">
+							<div class="col-md-3">
+								<a href="all_events.html" class="btn btn-outline-primary w-100">
+									<i class="fa-solid fa-calendar-days me-2"></i>Find Events
+								</a>
+							</div>
+							<div class="col-md-3">
+								<a href="account.html" class="btn btn-outline-secondary w-100">
+									<i class="fa-solid fa-user-cog me-2"></i>Account Settings
+								</a>
+							</div>
+							<div class="col-md-3">
+								<a href="help.html" class="btn btn-outline-info w-100">
+									<i class="fa-solid fa-question-circle me-2"></i>Help Center
+								</a>
+							</div>
+							<div class="col-md-3">
+								<a href="contact_us.html" class="btn btn-outline-success w-100">
+									<i class="fa-solid fa-envelope me-2"></i>Contact Support
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 
 	<!-- Footer -->
@@ -253,5 +309,6 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="../js/login.js"></script>
+	<script type="module" src="../js/ticket.js"></script>
 </body>
 </html>

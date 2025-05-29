@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>UEvents - Your Event Marketplace</title>
+	<title>Why Host On Our Platform | UEvents</title>
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -25,9 +25,9 @@
 				</button>
 			</div>
 		</div>
-		
+
 		<!-- Search bar -->
-		<form class="d-flex w-100 w-sm-auto flex-fill justify-content-sm-center">
+		<form class="d-flex w-100 w-sm-auto flex-fill justify-content-sm-center" action="all_events.html" method="get">
 			<div class="input-group w-100 w-sm-75">
 				<input type="text" class="form-control border-end-0 rounded-start-3 rounded-end-0 shadow-none" placeholder="Search events...">
 				<input type="text" class="form-control d-none d-sm-block border-start-0 rounded-start-0 shadow-none" placeholder="Search location...">
@@ -47,18 +47,16 @@
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse flex-grow-0 align-self-start justify-content-sm-end" id="navbarNav">
 			<ul class="navbar-nav column-gap-1">
-				<!-- Modified Our Services dropdown with an id -->
 				<li id="our-services" class="nav-item dropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						Our Services <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm">
-						<li><a class="dropdown-item" href="#">Events</a></li>
-						<li><a class="dropdown-item" href="#">Create Events</a></li>
+						<li><a class="dropdown-item" href="all_events.html">Events</a></li>
+						<li><a class="dropdown-item" href="why_create.html">Create Events</a></li>
 					</ul>
 				</li>
-				<!-- New nav-item for create.html, initially hidden -->
-				<li id="manage-events" class="nav-item d-none">
+				<li id="create-events" class="nav-item d-none">
 					<a class="nav-link" href="create.html">Create Event</a>
 				</li>
 				<li class="nav-item dropdown">
@@ -66,49 +64,49 @@
 						Tickets <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm">
-						<li> <a class="dropdown-item" href="#">Purchase Tickets</a></li>
+						<li> <a class="dropdown-item" href="ticket.html">Purchase Tickets</a></li>
 					</ul>
 				</li>
-				
+
 				<li class="nav-item dropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						Help Center <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm">
 						<li> <a class="dropdown-item" href="help.html">FAQs</a></li>
-						<li> <a class="dropdown-item" href="help.html">Contact Event Organizers</a></li>
+						<li> <a class="dropdown-item" href="contact_organizer.html">Contact Event Organizers</a></li>
 					</ul>
 				</li>
-				
+
 				<li class="nav-item dropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						About Us <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm">
-						<li> <a class="dropdown-item" href="#">Who We Are</a></li>
-						<li> <a class="dropdown-item" href="#">Contact Us</a></li>
-						<li> <a class="dropdown-item" href="#">Privacy and Terms</a></li>
+						<li> <a class="dropdown-item" href="about_us.html">Who We Are</a></li>
+						<li> <a class="dropdown-item" href="contact_us.html">Contact Us</a></li>
+						<li> <a class="dropdown-item" href="privacy_terms.html">Privacy and Terms</a></li>
 					</ul>
 				</li>
-				
+
 				<li class="nav-item dropdown position-relative" id="accountDropdown">
 					<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 						My Account <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm" style="right: 0; left: auto;">
-						<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a></li>
-						<li> <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a></li>
+						<li> <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a></li>
+						<li> <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a></li>
 					</ul>
 				</li>
 			</ul>
 		</div>
 	</nav>
-	
+
 	<!-- Hero Section -->
     <div class="text-center my-5">
         <h1 class="fw-bold mb-3">WHERE EVENT ORGANIZERS GROW</h1>
         <p class="lead mb-4">The all-in-one ticketing and discovery platform trusted by organizers and attendees worldwide.</p>
-        <a href="#" class="btn btn-primary btn-lg me-2">Get started for free</a>
+		<a href="#" id="start-hosting-btn" class="btn btn-primary btn-lg me-2">Get started for free</a>
         <a href="#" class="btn btn-outline-secondary btn-lg">Contact Sales</a>
     </div>
     <div class="container mb-5">
@@ -152,7 +150,7 @@
                         <li class="mb-2"><strong>Community:</strong> Join a network of successful organizers.</li>
                         <li class="mb-2"><strong>Marketing Tools:</strong> Promote your event with built-in sharing and ads.</li>
                     </ul>
-                    <a href="#" class="btn btn-outline-primary">Learn More</a>
+                    <a href="help.html" class="btn btn-outline-primary">Learn More</a>
                 </div>
             </div>
             <div class="col-md-6 text-center">
@@ -164,7 +162,7 @@
         <div class="text-center py-5">
             <h2 class="fw-bold mb-3">Grow Your Events With Us</h2>
             <p class="lead mb-4">All the tools you need to create, promote, and manage your events—big or small.</p>
-            <a href="#" class="btn btn-success btn-lg">Start Hosting Now</a>
+            <a href="create.html" id="get-started-btn" class="btn btn-outline-secondary btn-lg">Start Hosting Now</a>
         </div>
 	</main>
 
@@ -172,8 +170,8 @@
 	<footer class="bg-dark text-white text-center py-4">
 		<p class="mb-1">© 2025 UEvents. All rights reserved.</p>
 		<ul class="list-inline mb-0">
-			<li class="list-inline-item"><a href="#" class="text-decoration-none">Privacy & Terms</a></li>
-			<li class="list-inline-item"><a href="#" class="text-decoration-none">Contact</a></li>
+			<li class="list-inline-item"><a href="privacy_terms.html" class="text-decoration-none">Privacy & Terms</a></li>
+			<li class="list-inline-item"><a href="contact_us.html" class="text-decoration-none">Contact</a></li>
 			<li class="list-inline-item"><a href="help.html" class="text-decoration-none">FAQs</a></li>
 		</ul>
 	</footer>
@@ -255,5 +253,6 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="../js/login.js"></script>
+	<script src="../js/why_create.js"></script>
 </body>
 </html>
