@@ -26,10 +26,10 @@
 		</div>
 
 		<!-- Search bar -->
-		<form class="d-flex w-100 w-sm-auto flex-fill justify-content-sm-center">
+		<form class="d-flex w-100 w-sm-auto flex-fill justify-content-sm-center" action="pages/all_events.html" method="get">
 			<div class="input-group w-100 w-sm-75">
-				<input type="text" class="form-control border-end-0 rounded-start-3 rounded-end-0 shadow-none" placeholder="Search events...">
-				<input type="text" class="form-control d-none d-sm-block border-start-0 rounded-start-0 shadow-none" placeholder="Search location...">
+				<input type="text" class="form-control border-end-0 rounded-start-3 rounded-end-0 shadow-none" placeholder="Search events..." name="search">
+				<input type="text" class="form-control d-none d-sm-block border-start-0 rounded-start-0 shadow-none" placeholder="Search location..." name="location">
 				<button type="submit" class="btn btn-primary rounded-end-3">
 					<i class="fa-solid fa-search fa-fw"></i>
 				</button>
@@ -51,7 +51,7 @@
 						Our Services <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm">
-						<li><a class="dropdown-item" href="pages/why_buy.html">Events</a></li>
+						<li><a class="dropdown-item" href="pages/all_events.html">Events</a></li>
 						<li><a class="dropdown-item" href="pages/why_create.html">Create Events</a></li>
 					</ul>
 				</li>

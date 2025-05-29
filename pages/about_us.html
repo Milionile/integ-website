@@ -8,20 +8,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 	<link href="../css/styles.css" rel="stylesheet">
-	<style>
-        /* Custom anchor color and underline color */
-        #team .card {
-			a, a:visited {
-				color: #c31835 !important;
-				text-decoration-color: #c31835 !important;
-        	}
-
-			a:hover, a:focus {
-				color: #9f1329 !important;
-				text-decoration-color: #9f1329 !important;
-			}
-		}
-    </style>
+	<link href="../css/about_us.css" rel="stylesheet">
 </head>
 <body class="bg-light min-vh-100 d-flex flex-column">
 	<!-- Navbar -->
@@ -39,10 +26,10 @@
 		</div>
 
 		<!-- Search bar -->
-		<form class="d-flex w-100 w-sm-auto flex-fill justify-content-sm-center">
+		<form class="d-flex w-100 w-sm-auto flex-fill justify-content-sm-center" action="all_events.html" method="get">
 			<div class="input-group w-100 w-sm-75">
-				<input type="text" class="form-control border-end-0 rounded-start-3 rounded-end-0 shadow-none" placeholder="Search events...">
-				<input type="text" class="form-control d-none d-sm-block border-start-0 rounded-start-0 shadow-none" placeholder="Search location...">
+				<input type="text" class="form-control border-end-0 rounded-start-3 rounded-end-0 shadow-none" placeholder="Search events..." name="search">
+				<input type="text" class="form-control d-none d-sm-block border-start-0 rounded-start-0 shadow-none" placeholder="Search location..." name="location">
 				<button type="submit" class="btn btn-primary rounded-end-3">
 					<i class="fa-solid fa-search fa-fw"></i>
 				</button>
@@ -64,7 +51,7 @@
 						Our Services <i class="fa-solid fa-caret-down fa-fw fa-2xs"></i>
 					</a>
 					<ul class="dropdown-menu shadow-sm">
-						<li><a class="dropdown-item" href="why_buy.html">Events</a></li>
+						<li><a class="dropdown-item" href="all_events.html">Events</a></li>
 						<li><a class="dropdown-item" href="why_create.html">Create Events</a></li>
 					</ul>
 				</li>
@@ -183,7 +170,7 @@
 						<div class="card h-100 pb-2 shadow-sm">
 							<img class="card-img-top" src="../images/team/me.jpg" alt="Ernesto Mendoza">
 							<div class="card-body text-center">
-								<h5 class="card-title"><a href="" target="_blank">Ernesto Mendoza</a></h5>
+								<h5 class="card-title"><a href="https://milionile.github.io/CIP1101Mendoza/" target="_blank">Ernesto Mendoza</a></h5>
 								<p class="text-muted">Project Manager / Web Developer</p>
 							</div>
 						</div>
@@ -210,7 +197,7 @@
 						<div class="card h-100 pb-2 shadow-sm">
 							<img class="card-img-top" src="../images/team/ian.jpg" alt="Christian Tiburcio">
 							<div class="card-body text-center">
-								<h5 class="card-title"><a target="_blank" href="">Christian Tiburcio</a></h5>
+								<h5 class="card-title">Christian Tiburcio</h5>
 								<p class="text-muted">Web Developer</p>
 							</div>
 						</div>
@@ -219,7 +206,7 @@
 						<div class="card h-100 pb-2 shadow-sm">
 							<img class="card-img-top" src="../images/team/roxas.jpg" alt="Jahn Vincent Roxas">
 							<div class="card-body text-center">
-								<h5 class="card-title"><a target="_blank" href="">Jahn Vincent Roxas</a></h5>
+								<h5 class="card-title"><a href="https://cip1101csbdroxassy2425.on.drv.tw/www.cip1101roxas/HTML/portfolio.html" target="_blank">Jahn Vincent Roxas</a></h5>
 								<p class="text-muted">Web Quality Assurance Specialist</p>
 							</div>
 						</div>
@@ -228,7 +215,7 @@
 						<div class="card h-100 pb-2 shadow-sm">
 							<img class="card-img-top" src="../images/team/lester.jpg" alt="Lester Bartolome">
 							<div class="card-body text-center">
-								<h5 class="card-title"><a target="_blank" href="">Lester Bartolome</a></h5>
+								<h5 class="card-title">Lester Bartolome</h5>
 								<p class="text-muted">Requirement Analyst / Graphic Designer</p>
 							</div>
 						</div>
@@ -265,7 +252,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- Reviews Link Section -->
         <div class="row mb-5">
             <div class="col-12">

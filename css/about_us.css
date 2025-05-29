@@ -1,0 +1,11 @@
+#team .card {
+    a, a:visited {
+        color: #c31835 !important;
+        text-decoration-color: #c31835 !important;
+    }
+
+    a:hover, a:focus {
+        color: #9f1329 !important;
+        text-decoration-color: #9f1329 !important;
+    }
+}
