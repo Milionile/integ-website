@@ -216,7 +216,7 @@ export const events = [
     {
         id: "21",
         title: "Manila Night Bash",
-        image: "../images/manila_nightclub.jpg",
+        image: "../images/cove-manila-night-club.jpg",
         description: "Dance the night away with top DJs and a vibrant crowd.",
         price: 1000,
         organizer: "PartyLife PH",
@@ -227,7 +227,7 @@ export const events = [
     {
         id: "31",
         title: "Broadway in Manila",
-        image: "../images/broadway_manila.jpg",
+        image: "../images/broadway.webp",
         description: "A night of world-class musical performances.",
         price: 2500,
         organizer: "StageWorks",
@@ -238,7 +238,7 @@ export const events = [
     {
         id: "41",
         title: "Christmas Market Festival",
-        image: "../images/christmas_market.jpg",
+        image: "../images/chhristmas.jpg",
         description: "Celebrate the holidays with food, music, and gifts.",
         price: 0,
         organizer: "Holiday Events PH",
@@ -249,18 +249,18 @@ export const events = [
     {
         id: "51",
         title: "Singles Mixer Night",
-        image: "../images/singles_mixer.jpg",
+        image: "../images/singles.jpg",
         description: "Meet new people and maybe find your match!",
-        price: 500,
+        price: 1500,
         organizer: "LoveConnect",
-        date: "2025-06-20",
+        date: "2025-05-31",
         location: "Makati, Philippines",
         category: "dating"
     },
     {
         id: "61",
         title: "DIY Crafting Workshop",
-        image: "../images/craft_workshop.jpg",
+        image: "../images/workshop.jpg",
         description: "Unleash your creativity with hands-on crafting.",
         price: 300,
         organizer: "CraftyHands",
@@ -271,7 +271,7 @@ export const events = [
     {
         id: "71",
         title: "Startup Summit 2025",
-        image: "../images/startup_summit.jpg",
+        image: "../images/startup.webp",
         description: "Where innovation meets opportunity. Meet top tech founders.",
         price: 1200,
         organizer: "InnovateNow PH",
@@ -293,7 +293,7 @@ export const events = [
     {
         id: "22",
         title: "A Night Out in Manila",
-        image: "../images/manila_nightlife.jpg",
+        image: "../images/nightout.jpg",
         description: "City life can be lonely, especially when you're surrounded by so many people. Take the opportunity to meet others hoping for new connections",
         price: 700,
         organizer: "Ermantourage Europe & US",
